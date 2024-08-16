@@ -53,6 +53,8 @@
 /*=============================
 	02. Variable CSS
 ===============================*/
+
+
 :root {
     --tg-body-font-family     : "Libre Caslon Display", serif;
     --tg-heading-font-family  : "EB Garamond", serif;
@@ -91,7 +93,9 @@
     --skype                   : #00aff0;
 }
 
-body {
+
+
+* {
     font-family     : var(--tg-body-font-family);
     font-weight     : var(--tg-body-font-weight);
     font-size       : var(--tg-body-font-size);
