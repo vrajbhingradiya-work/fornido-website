@@ -8,12 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  Theme Name: Reland - Real Estate Group NextJS Template
-  Support: contact.alithemes@gmail.com
-  Description: Reland - Real Estate Group NextJS Template.
-  Version: 1.0
-*/
+
 
 /* CSS Index
 ============================
@@ -58,6 +53,8 @@
 /*=============================
 	02. Variable CSS
 ===============================*/
+
+
 :root {
     --tg-body-font-family     : "Libre Caslon Display", serif;
     --tg-heading-font-family  : "EB Garamond", serif;
@@ -95,6 +92,8 @@
     --youtube                 : #E53935;
     --skype                   : #00aff0;
 }
+
+
 
 body {
     font-family     : var(--tg-body-font-family);
