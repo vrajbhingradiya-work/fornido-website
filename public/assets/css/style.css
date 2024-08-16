@@ -145,7 +145,7 @@ button:focus {
 a:hover,
 .portfolio-cat a:hover,
 .footer -menu li a:hover {
-    color          : var(--tg-primary-color);
+    color          : #2B2B27;
     text-decoration: none;
 }
 
@@ -307,6 +307,7 @@ label {
     position: relative
 }
 
+
 .theme-overlay::before {
     background: var(--tg-primary-color) none repeat scroll 0 0;
     content   : "";
@@ -371,7 +372,7 @@ label {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select     : none;
-    background      : var(--tg-primary-color) none repeat scroll 0 0;
+    background      : var(--tg-secondary-color) none repeat scroll 0 0;
     border          : 1.3px solid var(--tg-primary-color);
     border-radius   : 8px;
     color           : var(--tg-white);
@@ -380,7 +381,7 @@ label {
     font-size       : 14px;
     font-weight     : 500;
     letter-spacing  : 0.04em;
-    line-height     : 1rem;
+    line-height     : 1.3rem;
     margin-bottom   : 0;
     padding         : 19px 38px;
     text-align      : center;
@@ -438,8 +439,8 @@ label {
 }
 
 .transparent-btn:hover {
-    border-color: var(--tg-primary-color);
-    background  : var(--tg-primary-color);
+    border-color: var(--tg-secondary-color);
+    background  : var(--tg-secondary-color);
     color       : var(--tg-white);
 }
 
@@ -803,7 +804,7 @@ label {
 }
 
 .sticky-menu .header-action .icon a {
-    border-color: var(--tg-primary-color);
+    border-color: var(--tg-secondary-color);
 }
 
 .sticky-menu .header-action .icon a>span {
@@ -1730,7 +1731,7 @@ label {
 }
 
 .mobile-menu .social-links li a:hover {
-    border-color: var(--tg-primary-color);
+    border-color: var(--tg-secondary-color);
     background  : var(--tg-primary-color);
     color       : var(--tg-white);
 }
@@ -1863,7 +1864,7 @@ label {
 }
 
 .slider-active .slick-dots li.slick-active button {
-    border-color: var(--tg-primary-color);
+    border-color: var(--tg-secondary-color);
 }
 
 .slider-active .slick-dots li.slick-active button::after {
@@ -4151,7 +4152,7 @@ label {
 .pagination-wrap .pagination .page-item.active .page-link,
 .pagination-wrap .pagination .page-link:hover {
     background  : var(--tg-primary-color);
-    border-color: var(--tg-primary-color);
+    border-color: var(--tg-secondary-color);
     color       : var(--tg-white);
 }
 
@@ -4444,7 +4445,7 @@ label {
 	30. Footer
 ===============================*/
 .footer-bg {
-    background-image   : --tg-secondary-background;
+    background-color   : var(--tg-secondary-color);
     background-size    : cover;
     background-position: center;
 }

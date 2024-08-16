@@ -8,7 +8,7 @@ export default function Footer1({}) {
     <>
       <footer>
         <div className="footer-area footer-bg">
-          <div className="container">
+          <div className="container ">
             <div className="footer-top">
               <div className="row ">
                 <div className="col-xl-4 col-md-4 col-sm-5">
