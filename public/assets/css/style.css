@@ -395,7 +395,6 @@ label {
     position: relative;
     overflow: hidden;
     height  : 1rem;
-    padding         : 19px 38px;
 }
 
 .btn_c {
@@ -416,7 +415,7 @@ label {
 }
 
 .btn:hover .btn_c {
-    transform: translateY(-1rem);
+    transform: translateY(-1.5rem);
 }
 
 .btn:hover .btn_t1 {
@@ -510,11 +509,13 @@ label {
     width   : 100%;
     z-index : 99;
     height  : auto;
+    font-family: var(--tg-body-font-family);
 }
 
 .header-mail a {
     color          : var(--tg-white);
-    text-decoration: underline;
+    font-family: var(--tg-body-font-family);
+    
 }
 
 .header-mail a:hover {
@@ -533,6 +534,7 @@ label {
     display    : flex;
     flex-grow  : 1;
     align-items: center;
+    
 }
 
 .navbar-wrap ul {
@@ -541,6 +543,7 @@ label {
     flex-wrap     : wrap;
     padding       : 0 0;
     margin        : 0 0 0 auto;
+    font-family: var(--tg-body-font-family);
 }
 
 .navbar-wrap .navigation.right {
@@ -731,7 +734,7 @@ label {
 }
 
 .header-action .header-contact ul li:first-child a {
-    text-decoration: underline;
+    
 }
 
 .sidebar-contact .menu-icon a,
@@ -1022,7 +1025,7 @@ label {
 }
 
 .header-top-right ul li:nth-child(1) a {
-    text-decoration: underline;
+    
 }
 
 .header-top-right ul li a:hover {
@@ -1288,7 +1291,7 @@ label {
 }
 
 .sidebar-contact ul li:first-child a {
-    text-decoration: underline;
+    
 }
 
 .sidebar-social .list-wrap {
@@ -2708,7 +2711,7 @@ label {
 }
 
 .services-content-two .services-list ul li a:hover {
-    text-decoration: underline;
+    
 }
 
 /* services-three */
@@ -2784,7 +2787,7 @@ label {
 }
 
 .project-content .title a:hover {
-    text-decoration: underline;
+    
     color          : var(--tg-heading-font-color);
 }
 
@@ -3274,7 +3277,7 @@ label {
 
 .team-content .title a:hover {
     color          : var(--tg-white);
-    text-decoration: underline;
+    
 }
 
 .team-content span {
@@ -3352,7 +3355,7 @@ label {
 }
 
 .team-details-content .td-contact ul li:first-child a {
-    text-decoration: underline;
+    
 }
 
 .team-details-content p {
@@ -4471,7 +4474,7 @@ label {
 }
 
 .footer-contact .list-wrap li:first-child a {
-    text-decoration: underline;
+    
 }
 
 .footer-contact .list-wrap li a:hover {
