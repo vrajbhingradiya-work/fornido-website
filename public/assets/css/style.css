@@ -4442,7 +4442,7 @@ label {
 	30. Footer
 ===============================*/
 .footer-bg {
-    background-image   : url(../img/bg/footer_bg.jpg);
+    background-image   : --tg-secondary-background;
     background-size    : cover;
     background-position: center;
 }
