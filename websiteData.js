@@ -47,22 +47,22 @@ export const websiteData = {
     socials: [
       {
         title: "instagram",
-        icon: <i className="fab fa-instagram" />,
+        icon: <i className="fab fa-instagram icon-fill " />,
         link: "/insta",
       },
       {
         title: "facebook",
-        icon: <i className="fab fa-facebook-f" />,
+        icon: <i className="fab fa-facebook-f icon-fill" />,
         link: "/facebook",
       },
       {
         title: "youtube",
-        icon: <i className="fab fa-youtube" />,
+        icon: <i className="fab fa-youtube icon-fill" />,
         link: "/youtube",
       },
       {
         title: "twitter",
-        icon: <i className="fab fa-twitter" />,
+        icon: <i className="fab fa-twitter icon-fill" />,
         link: "/twitter",
       },
     ],
