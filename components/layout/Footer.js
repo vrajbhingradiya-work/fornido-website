@@ -97,10 +97,16 @@ export default function Footer1({}) {
                   <div className="copyright-text text-center">
                     <p>
                       Copyright © <span>Fornido</span>{" "}
-                      {new Date().getFullYear()}. All Rights Reserved
+                      {new Date().getFullYear()}. All Rights Reserved by{" "}
+                      <Link
+                        href="https://www.digitalfry.in/"
+                        className="digital-fry-text  "
+                      >
+                        Digital Fry
+                      </Link>
                     </p>
                   </div>
-                  <div className="footer-social">
+                  {/* <div className="footer-social">
                     <ul className="list-wrap">
                       {footerData?.socials.map((item, index) => (
                         <li key={index}>
@@ -108,7 +114,7 @@ export default function Footer1({}) {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
