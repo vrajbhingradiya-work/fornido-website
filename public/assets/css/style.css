@@ -97,7 +97,7 @@ a{
 }
 
 
-* {
+body{
     font-family     : var(--tg-body-font-family);
     font-weight     : var(--tg-body-font-weight);
     font-size       : var(--tg-body-font-size);
