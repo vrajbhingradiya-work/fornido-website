@@ -92,10 +92,12 @@
     --youtube                 : #E53935;
     --skype                   : #00aff0;
 }
+a{
+  text-decoration: none;
+}
 
 
-
-body {
+* {
     font-family     : var(--tg-body-font-family);
     font-weight     : var(--tg-body-font-weight);
     font-size       : var(--tg-body-font-size);
@@ -395,12 +397,13 @@ label {
 .btn_m {
     position: relative;
     overflow: hidden;
-    height  : 1rem;
-}
-
-.btn_c {
-    transition: transform .6s cubic-bezier(.55, 0, .1, 1);
-}
+  }
+  
+  .btn_c {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+  }
 
 .btn_t1 {
     transform-origin: 100%;
@@ -559,6 +562,7 @@ label {
 
 .navbar-wrap ul li a {
     font-size     : 14px;
+    text-decoration: none;
     font-weight   : 500;
     color         : var(--tg-white);
     padding       : 48px 20px;
@@ -1011,6 +1015,7 @@ label {
     margin-bottom: 0;
     font-size    : 14px;
     color        : var(--tg-silver);
+    font-family: var(--tg-body-font-family);
 }
 
 .header-top-right ul {
@@ -1021,6 +1026,8 @@ label {
 }
 
 .header-top-right ul li a {
+    text-decoration: none;
+    font-family: var(--tg-body-font-family);
     color    : var(--tg-silver);
     font-size: 14px;
 }
@@ -2641,6 +2648,15 @@ label {
 }
 
 .services-content-two .services-list ul li a {
+    text-decoration: none;
+    font-size     : 22px;
+    text-transform: uppercase;
+    line-height   : 1.4;
+    font-family   : var(--tg-heading-font-family);
+    color         : var(--tg-heading-font-color);
+}
+.services-content-two .services-list ul li p {
+    text-decoration: none;
     font-size     : 22px;
     text-transform: uppercase;
     line-height   : 1.4;
@@ -2722,6 +2738,7 @@ label {
     font-size     : 24px;
     text-transform: uppercase;
     margin-bottom : 10px;
+    text-decoration: none;
 }
 
 .project-content .title a:hover {
@@ -5797,6 +5814,7 @@ label {
         bottom: 30px;
     }
     .services-content-two .services-list ul li a {
+        text-decoration: none;
         font-size: 20px;
     }
     .banner-area-five .banner-content::after {

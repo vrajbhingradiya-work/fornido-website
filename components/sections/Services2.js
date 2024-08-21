@@ -20,22 +20,22 @@ export default function Services2() {
                 <div className="services-list">
                   <ul className="list-wrap">
                     <li>
-                      <Link href="#">High Quality Products</Link>
+                      <p>High Quality Products</p>
                     </li>
                     <li>
-                      <Link href="#">Green Environment</Link>
+                      <p>Green Environment</p>
                     </li>
                     <li>
-                      <Link href="#">Comprehensive Amenities</Link>
+                      <p>Comprehensive Amenities</p>
                     </li>
                     <li>
-                      <Link href="#">Professional Services</Link>
+                      <p>Professional Services</p>
                     </li>
                     <li>
-                      <Link href="#">Humanitarian Community</Link>
+                      <p>Humanitarian Community</p>
                     </li>
                     <li>
-                      <Link href="#">Absolute Security</Link>
+                      <p>Absolute Security</p>
                     </li>
                   </ul>
                 </div>
