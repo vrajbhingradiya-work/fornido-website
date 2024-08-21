@@ -398,6 +398,7 @@ label {
 
 /* CSS */
 .button-57 {
+    font-family: var(--tg-body-font-family);
   position: relative;
   border-radius: 4px;
   overflow: hidden;
@@ -416,6 +417,8 @@ label {
   touch-action: manipulation;
 }
 .button-58 {
+    font-family: var(--tg-body-font-family);
+
   position: relative;
   border-radius: 4px;
   overflow: hidden;
@@ -434,17 +437,23 @@ label {
   touch-action: manipulation;
 }
 .button-dark-57{
+    font-family: var(--tg-body-font-family);
+
     color:var(--tg-secondary-color)
 
 }
 
 .button-57 span:first-child, .button-58 span:first-child {
+    font-family: var(--tg-body-font-family);
+
   position: relative;
   transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 10;
 }
 
 .button-57 span:last-child, .button-58 span:last-child {
+    font-family: var(--tg-body-font-family);
+
   color: white;
   white-space: nowrap;
   display: block;
@@ -461,6 +470,8 @@ label {
 }
 
 .button-57:after {
+    font-family: var(--tg-body-font-family);
+
   content: "";
   position: absolute;
   bottom: -50%;
@@ -502,12 +513,16 @@ label {
 
 
 .btn:hover {
+    font-family: var(--tg-body-font-family);
+
     background  : var(--tg-secondary-color);
     border-color: var(--tg-secondary-color);
     color       : var(--tg-white);
 }
 
 .transparent-btn {
+    font-family: var(--tg-body-font-family);
+
     background: transparent;
     color     : var(--tg-primary-color);
 }
