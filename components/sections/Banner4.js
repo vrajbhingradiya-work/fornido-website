@@ -21,19 +21,11 @@ export default function Banner4() {
                 </h2>
                 <Link
                   href={heroSectionData.button.link}
-                  className="btn transparent-btn wow fadeInUp"
+                  className="button-57"
                   data-wow-delay=".4s"
                 >
-                  <div className="btn_m">
-                    <div className="btn_c">
-                      <div className="btn_t1">
-                        {heroSectionData.button.title}
-                      </div>
-                      <div className="btn_t2">
-                        {heroSectionData.button.title}
-                      </div>
-                    </div>
-                  </div>
+                  <span class="text">{heroSectionData.button.title}</span>
+                  <span>{heroSectionData.button.title}</span>
                 </Link>
               </div>
             </div>

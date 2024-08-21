@@ -28,12 +28,27 @@ export default function Header5({ handleMobileMenu, scroll }) {
                 <div className="header-top-right">
                   <ul className="list-wrap">
                     <li>
-                      <Link href="mailto:worldofsahilanand@gmail.com">
-                        worldofsahilanand@gmail.com
+                      <Link
+                        href={`mailto:${websiteData.companyProfile.contactInformation.contactEmail}`}
+                      >
+                        {
+                          websiteData.companyProfile.contactInformation
+                            .contactEmail
+                        }
                       </Link>
                     </li>
                     <li>
-                      <Link href="tel:+918282820811">+91-82828-20811</Link>
+                      <Link
+                        href={`tel:${websiteData.companyProfile.contactInformation.contactNumber.replace(
+                          "-",
+                          ""
+                        )}`}
+                      >
+                        {
+                          websiteData.companyProfile.contactInformation
+                            .contactNumber
+                        }
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -87,7 +102,7 @@ export default function Header5({ handleMobileMenu, scroll }) {
                     <div className="menu-outer">
                       <MobileMenu />
                     </div>
-                    <div className="social-links">
+                    {/* <div className="social-links">
                       <ul className="clearfix list-wrap">
                         <li>
                           <Link href="#">
@@ -115,7 +130,7 @@ export default function Header5({ handleMobileMenu, scroll }) {
                           </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </nav>
                 </div>
                 <div className="menu-backdrop" onClick={handleMobileMenu} />

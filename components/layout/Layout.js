@@ -11,6 +11,7 @@ import Header6 from "./Header6";
 import Header7 from "./Header7";
 import Header8 from "./Header8";
 import PageHead from "./PageHead";
+import { websiteData } from "@/websiteData";
 
 export default function Layout({
   headerStyle,
@@ -75,8 +76,29 @@ export default function Layout({
         {children}
       </main>
       {noFooter ? null : <Footer />}
+      <div className="cta-buttons">
+        <a
+          href={`https://wa.me/${websiteData.companyProfile.contactInformation.contactNumber.replace(
+            "-",
+            ""
+          )}`}
+          className="cta-btn whatsapp-btn"
+          target="_blank"
+        >
+          <i className="fab fa-whatsapp"></i>
+        </a>
+        <a
+          href={`tel:${websiteData.companyProfile.contactInformation.contactNumber.replace(
+            "-",
+            ""
+          )}`}
+          className="cta-btn call-btn"
+        >
+          <i className="fas fa-phone-alt"></i>
+        </a>
+      </div>
 
-      <BackToTop />
+      {/* <BackToTop /> */}
     </>
   );
 }

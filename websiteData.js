@@ -3,7 +3,7 @@ export const websiteData = {
     logo: "<link to drive logo folder>",
     contactInformation: {
       contactEmail: "worldofsahilanand@gmail.com",
-      contactNumber: "+91-82828-20811",
+      contactNumber: "+91-8282820811",
       addressInfo: {
         mainOffice: {
           address: {

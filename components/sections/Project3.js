@@ -24,13 +24,13 @@ export default function Project3() {
                 <h2 className="title">
                   Discover our Underconstrution and comple projects
                 </h2>
-                <Link href="/project/1" className="btn transparent-btn">
-                  <div className="btn_m">
-                    <div className="btn_c">
-                      <div className="btn_t1">Explore all</div>
-                      <div className="btn_t2">Explore all</div>
-                    </div>
-                  </div>
+                <Link
+                  href="/project/1"
+                  className="button-58"
+                  data-wow-delay=".4s"
+                >
+                  <span class="text button-dark-57">Explore Now</span>
+                  <span>Explore Now</span>
                 </Link>
               </div>
             </div>

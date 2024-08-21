@@ -19,18 +19,13 @@ export default function About() {
                 <p>{aboutSectionData.text}</p>
                 <Link
                   href={aboutSectionData.button.link}
-                  className="btn transparent-btn"
+                  className="button-58"
+                  data-wow-delay=".4s"
                 >
-                  <div className="btn_m">
-                    <div className="btn_c">
-                      <div className="btn_t1">
-                        {aboutSectionData.button.title}
-                      </div>
-                      <div className="btn_t2">
-                        {aboutSectionData.button.title}
-                      </div>
-                    </div>
-                  </div>
+                  <span class="text button-dark-57">
+                    {aboutSectionData.button.title}
+                  </span>
+                  <span>{aboutSectionData.button.title}</span>
                 </Link>
               </div>
             </div>
