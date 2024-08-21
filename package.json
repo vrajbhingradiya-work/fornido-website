@@ -10,6 +10,7 @@
         "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
     },
     "dependencies": {
+        "bootstrap": "^5.3.3",
         "eslint": "8.40.0",
         "eslint-config-next": "13.4.1",
         "next": "^14.2.5",
@@ -30,6 +31,6 @@
     "devDependencies": {
         "autoprefixer": "^10.4.20",
         "postcss": "^8.4.41",
-        "tailwindcss": "^3.4.9"
+        "tailwindcss": "^3.4.10"
     }
 }

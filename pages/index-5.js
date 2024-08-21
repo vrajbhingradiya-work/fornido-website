@@ -12,7 +12,7 @@ import { websiteData } from "@/websiteData";
 export default function Home1() {
   return (
     <>
-      <Layout headerStyle={1}>
+      <Layout headerStyle={5}>
         <Slider />
         <About />
         <Brand />

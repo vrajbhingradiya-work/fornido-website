@@ -6,6 +6,12 @@ export default function Banner4() {
   return (
     <>
       <section className="banner-area-five banner-bg-four">
+        {/* Background video */}
+        <video className="banner-video" autoPlay loop muted playsInline>
+          <source src="/assets/img/banner/banner-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-8 col-lg-10">
