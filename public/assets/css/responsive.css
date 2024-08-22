@@ -538,7 +538,10 @@
 	display: block !important;
 }
 .menu-area .mobile-nav-toggler {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 .logo.mobile-logo.d-none {
 	display: block !important;
