@@ -15,7 +15,12 @@ export default function Header6({ handleMobileMenu, scroll }) {
           <div className="container custom-container">
             <div className="row">
               <div className="col-12">
-                <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
+                <div
+                  className={
+                    scroll ? "mobile-nav-toggler-dark" : "mobile-nav-toggler"
+                  }
+                  onClick={handleMobileMenu}
+                >
                   <i className="fas fa-bars" />
                 </div>
                 <div className="menu-wrap">

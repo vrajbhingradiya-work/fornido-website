@@ -65,7 +65,12 @@ export default function Header5({ handleMobileMenu, scroll }) {
           <div className="container custom-container">
             <div className="row">
               <div className="col-12">
-                <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
+                <div
+                  className={`mobile-nav-toggler ${
+                    scroll ? "logo-color-dark" : "logo-color"
+                  } `}
+                  onClick={handleMobileMenu}
+                >
                   <i className="fas fa-bars" />
                 </div>
                 <div className="menu-wrap">
@@ -96,7 +101,10 @@ export default function Header5({ handleMobileMenu, scroll }) {
                     </div>
                     <div className="nav-logo">
                       <Link href="/">
-                        <img src="/assets/img/logo/logo02.png" alt="Logo" />
+                        <img
+                          src="/assets/img/logo/logo02-dark.png"
+                          alt="Logo"
+                        />
                       </Link>
                     </div>
                     <div className="menu-outer">

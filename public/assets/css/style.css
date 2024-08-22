@@ -48,7 +48,26 @@
 /*=============================
 	01. Fonts
 ===============================*/
+@font-face {
+    font-family: 'Didot Medium';
+    src: url('../fonts/fonts/Didot-Fonts/Didot\ Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
+    @font-face {
+        font-family: 'Didot Regular';
+        src: url('../fonts/fonts/Didot-Fonts/Didot\ Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+/* @font-face {
+    font-family: 'Didot LT Std Italic';
+    src: url('/fonts/Didot LT Std Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}  */
 
 /*=============================
 	02. Variable CSS
@@ -56,8 +75,8 @@
 
 
 :root {
-    --tg-body-font-family     : "Libre Caslon Display", serif;
-    --tg-heading-font-family  : "EB Garamond", serif;
+    --tg-body-font-family     : 'Didot Regular', serif;
+    --tg-heading-font-family  : 'Didot Regular', serif;
     --tg-primary-color        :  #9b7250;
     --tg-secondary-color      : #2b2b27;
     --tg-body-background-color: #FEFFFB;
@@ -71,6 +90,7 @@
     --tg-heading-font-weight  : 500;
     --tg-body-line-height     : 1.86;
     --tg-heading-line-height  : 1.2;
+    --tg-logo                 : #DFD3C9;
     --tg-blue                 : #9b7250;
     --tg-indigo               : #6610f2;
     --tg-purple               : #6f42c1;
@@ -1758,7 +1778,7 @@ label {
     font-size         : 16px;
     line-height       : 32px;
     color             : var(--tg-white);
-    background        : var(--tg-primary-color);
+    background        : var(--tg-secondary-color);
     cursor            : pointer;
     border-radius     : 2px;
     -webkit-transition: all 500ms ease;
@@ -1835,12 +1855,19 @@ label {
     position   : relative;
     float      : right;
     font-size  : 30px;
-    cursor     : pointer;
+    cursor     : pointer;   
     line-height: 1;
-    color      : var(--tg-primary-color);
+    
     display    : none;
     margin-top : 0px;
 }
+.logo-color{
+    color      : var(--tg-logo);
+}
+.logo-color-dark{
+    color: var(--tg-secondary-color);
+}
+
 
 /*=============================
 	05. Slider
@@ -4493,6 +4520,7 @@ label {
     
 }
 
+
 .footer-top {
     padding: 135px 0 70px;
 }
@@ -5445,7 +5473,10 @@ label {
         display: block !important;
     }
     .menu-area .mobile-nav-toggler {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
     .logo.mobile-logo.d-none {
         display: block !important;

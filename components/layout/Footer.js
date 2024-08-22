@@ -14,7 +14,7 @@ export default function Footer1({}) {
                 <div className="col-xl-4 col-md-4 col-sm-5">
                   <div className="footer-widget">
                     <div className="footer-logo ">
-                      <Link href="/">
+                      <Link className="flex-content-center" href="/">
                         <img
                           src="/assets/img/logo/logo02.png"
                           className="website-footer-logo"
@@ -28,19 +28,19 @@ export default function Footer1({}) {
                 <div className="col-xl-3 col-md-4 col-sm-7 ">
                   <div className="footer-widget  ">
                     <h2 className="fw-title ">Contact</h2>
-                    <div className="footer-contact">
-                      <p className="">
-                        {
-                          companyProfile.contactInformation.addressInfo
-                            .mainOffice.address.addressLine1
-                        }
-                        <br />
-                        {
-                          companyProfile.contactInformation.addressInfo
-                            .mainOffice.address.addressLine2
-                        }
-                      </p>
+                    <div className="footer-contact ">
                       <ul className="list-wrap">
+                        <li className="">
+                          {
+                            companyProfile.contactInformation.addressInfo
+                              .mainOffice.address.addressLine1
+                          }
+                          <br />
+                          {
+                            companyProfile.contactInformation.addressInfo
+                              .mainOffice.address.addressLine2
+                          }
+                        </li>
                         <li>
                           <Link
                             href={`mailto:${companyProfile.contactInformation.contactEmail}`}

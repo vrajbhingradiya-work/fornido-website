@@ -1,16 +1,13 @@
 @font-face {
-    font-family: "flaticon_reland";
-    src: url("../fonts/flaticon_reland.eot");
-    src: url("../fonts/flaticon_reland.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/flaticon_reland.woff2") format("woff2"),
-    url("../fonts/flaticon_reland.woff") format("woff"),
-    url("../fonts/flaticon_reland.ttf") format("truetype"),
-    url("../fonts/flaticon_reland.svg#flaticon_reland") format("svg");
+    font-family: 'Didot Regular';
+    src: url('../fonts/fonts/Didot-Fonts/Didot\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
-    font-family: flaticon_reland !important;
+    font-family: 'Didot Regular' !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
