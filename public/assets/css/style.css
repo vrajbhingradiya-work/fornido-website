@@ -133,6 +133,11 @@ label, input, p, div, a, h1, h2, h3, h4, h5, h6 {
 
 a{
     text-decoration: none !important;
+    transition: transform 300ms ease-in-out; /* Transition duration and easing */
+  transform: scale(1);
+}
+a:hover{
+    transform: scale(110%)  !important;
 }
 
 img,
