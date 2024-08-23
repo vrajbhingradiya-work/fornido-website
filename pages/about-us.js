@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import Parallax from "@/components/sections/Parallax";
+import { websiteData } from "@/websiteData";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper";
@@ -241,9 +242,9 @@ export default function Overview() {
         {/* mission-area-end */}
 
         {/* parallax-img-area */}
-        <div className="section-pt-140">
+        {/* <div className="section-pt-140">
           <Parallax />
-        </div>
+        </div> */}
         {/* parallax-img-area-end */}
         {/* roadMap-area */}
         {/* <section className="roadmap-area section-py-140">
@@ -533,21 +534,36 @@ export default function Overview() {
                 </div>
                 <div className="col-lg-7">
                   <div className="team-details-content">
-                    <span className="sub-title">Architect</span>
-                    <h2 className="title">Johan Johnson</h2>
+                    <span className="sub-title">The visionary</span>
+                    <h2 className="title">Sahil Anand</h2>
                     <div className="td-contact">
                       <ul className="list-wrap">
                         <li>
-                          <Link href="mailto:johanjohnson@mail.com">
-                            johanjohnson@mail.com
+                          <Link
+                            href={`mailto:${websiteData.companyProfile.contactInformation.contactEmail}`}
+                          >
+                            {
+                              websiteData.companyProfile.contactInformation
+                                .contactEmail
+                            }
                           </Link>
                         </li>
                         <li>
-                          <Link href="tel:0123456789">+7 875 647 6689</Link>
+                          <Link
+                            href={`tel:${websiteData.companyProfile.contactInformation.contactNumber.replace(
+                              "-",
+                              ""
+                            )}`}
+                          >
+                            {
+                              websiteData.companyProfile.contactInformation
+                                .contactNumber
+                            }
+                          </Link>
                         </li>
                       </ul>
                     </div>
-                    <div className="td-social">
+                    {/* <div className="td-social">
                       <ul className="list-wrap">
                         <li>
                           <Link href="#">
@@ -570,7 +586,7 @@ export default function Overview() {
                           </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                     <p>
                       Nemo enim ipsam voluptatem quia voluptas sit aspernatur
                       aut odit aut fugit, sed quia consequuntur magni dolores
@@ -587,9 +603,9 @@ export default function Overview() {
                       pleasure, but because those who do not know how to pursue
                       pleasure rationally encounter consequences
                     </p>
-                    <div className="sine-img mt-40">
+                    {/* <div className="sine-img mt-40">
                       <img src="/assets/img/images/sine.png" alt="" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
