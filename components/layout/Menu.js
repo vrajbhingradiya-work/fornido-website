@@ -27,7 +27,9 @@ export default function Menu({ isShow }) {
     <>
       <ul className="navigation">
         <li className="menu-item-has-children">
-          <Link href="/">Home</Link>
+          <Link className="text-white" href="/">
+            Home
+          </Link>
           {/* <ul className="sub-menu" >
                         <li><Link href="/">Home One</Link></li>
                         <li><Link href="/index-2">Home Two</Link></li>
@@ -40,7 +42,9 @@ export default function Menu({ isShow }) {
                     </ul> */}
         </li>
         <li className="menu-item-has-children">
-          <Link href="/about-us">About</Link>
+          <Link className="text-white" href="/about-us">
+            About
+          </Link>
           {/* <ul className="sub-menu" >
                         <li><Link href="/overview">Overview</Link></li>
                         <li><Link href="/mission">Mission</Link></li>
@@ -49,7 +53,9 @@ export default function Menu({ isShow }) {
                     </ul> */}
         </li>
         <li className="menu-item-has-children">
-          <Link href="/#projects">Projects</Link>
+          <Link className="text-white" href="/#projects">
+            Projects
+          </Link>
           <ul className="sub-menu">
             {/* <li>
               <Link href="/project">Projects Two Col</Link>
@@ -61,10 +67,14 @@ export default function Menu({ isShow }) {
               <Link href="/project-three">Projects Four Col</Link>
             </li> */}
             <li>
-              <Link href="/project/1">Projects One</Link>
+              <Link className="text-white" href="/project/1">
+                Projects One
+              </Link>
             </li>
             <li>
-              <Link href="/project/2">Projects Two</Link>
+              <Link className="text-white" href="/project/2">
+                Projects Two
+              </Link>
             </li>
           </ul>
         </li>
@@ -109,7 +119,9 @@ export default function Menu({ isShow }) {
         </li> */}
         {/* pages-extra-end */}
         <li>
-          <Link href="/contact">contact</Link>
+          <Link className="text-white" href="/contact">
+            contact
+          </Link>
         </li>
       </ul>
     </>
