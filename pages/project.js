@@ -1,5 +1,5 @@
-import ProjectFilter from "@/components/elements/ProjectFilter";
-import Layout from "@/components/layout/Layout";
+import ProjectFilter from "../components/elements/ProjectFilter";
+import Layout from "../components/layout/Layout";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import projectData from "../util/project.json";
