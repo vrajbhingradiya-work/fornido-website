@@ -1,9 +1,13 @@
+"use client";
 import Link from "next/link";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import { websiteData } from "@/websiteData";
+import { useRouter } from "next/router";
 export default function Header5({ handleMobileMenu, scroll }) {
   const companyProfile = websiteData.companyProfile;
+  const router = useRouter();
+  const path = router.pathname;
   return (
     <>
       <header className="header-style-four">
@@ -58,7 +62,7 @@ export default function Header5({ handleMobileMenu, scroll }) {
         </div>
         <div
           id="sticky-header"
-          className={`menu-area transparent-header ${
+          className={`menu-area ${path === "/" ? "transparent-header" : ""} ${
             scroll ? "sticky-menu" : ""
           }`}
         >
@@ -66,8 +70,12 @@ export default function Header5({ handleMobileMenu, scroll }) {
             <div className="row">
               <div className="col-12">
                 <div
-                  className={`mobile-nav-toggler ${
-                    scroll ? "logo-color-dark" : "logo-color"
+                  className={`mobile-nav-toggler  ${
+                    path !== "/"
+                      ? "logo-color-dark"
+                      : scroll
+                      ? "logo-color-dark"
+                      : "logo-color"
                   } `}
                   onClick={handleMobileMenu}
                 >
@@ -80,12 +88,16 @@ export default function Header5({ handleMobileMenu, scroll }) {
                         <img
                           className="website-logo"
                           src={
-                            scroll
+                            path !== "/"
+                              ? "/assets/img/logo/logo02-dark.png"
+                              : scroll
                               ? "/assets/img/logo/logo02-dark.png"
                               : "/assets/img/logo/logo02.png"
                           }
                           alt="Logo"
                         />
+
+                        {/* if homepage ? " scroll behaviour changes" :  */}
                       </Link>
                     </div>
                     <div className="navbar-wrap main-menu d-none d-lg-flex">
