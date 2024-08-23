@@ -24,7 +24,7 @@ export default function Banner4() {
                   className="button-57"
                   data-wow-delay=".4s"
                 >
-                  <span class="text">{heroSectionData.button.title}</span>
+                  <span className="text">{heroSectionData.button.title}</span>
                   <span>{heroSectionData.button.title}</span>
                 </Link>
               </div>

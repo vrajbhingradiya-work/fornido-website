@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -7,6 +8,13 @@ import projectData from "../../util/project.json";
 import ViodePopup from "@/components/elements/ViodePopup";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  FaRulerCombined,
+  FaBuilding,
+  FaVectorSquare,
+  FaTools,
+} from "react-icons/fa";
+import { TbMoneybag } from "react-icons/tb";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -100,9 +108,7 @@ const BlogDetails = () => {
                 <div className="project-info-wrap">
                   <ul className="list-wrap">
                     <li className="info-item">
-                      <div className="icon">
-                        <i className="flaticon-018-rescale" />
-                      </div>
+                      <FaRulerCombined className="icon" />
                       <div className="content">
                         <p>
                           Property size <span>174,000 sqft</span>
@@ -110,9 +116,7 @@ const BlogDetails = () => {
                       </div>
                     </li>
                     <li className="info-item">
-                      <div className="icon">
-                        <i className="flaticon-008-money-bag" />
-                      </div>
+                      <TbMoneybag className="icon" />
                       <div className="content">
                         <p>
                           Price Range <span>$24K - $77K</span>
@@ -120,9 +124,7 @@ const BlogDetails = () => {
                       </div>
                     </li>
                     <li className="info-item">
-                      <div className="icon">
-                        <i className="flaticon-017-apartment" />
-                      </div>
+                      <FaBuilding className="icon" />
                       <div className="content">
                         <p>
                           Type<span>{project.type}</span>
@@ -130,9 +132,7 @@ const BlogDetails = () => {
                       </div>
                     </li>
                     <li className="info-item">
-                      <div className="icon">
-                        <i className="flaticon-016-puzzle" />
-                      </div>
+                      <FaVectorSquare className="icon" />
                       <div className="content">
                         <p>
                           Flat Size <span>100 - 150 Sqft</span>
@@ -140,9 +140,7 @@ const BlogDetails = () => {
                       </div>
                     </li>
                     <li className="info-item">
-                      <div className="icon">
-                        <i className="flaticon-009-crane-truck" />
-                      </div>
+                      <FaTools className="icon" />
                       <div className="content">
                         <p>
                           Status <span>{project.status}</span>
@@ -223,7 +221,7 @@ const BlogDetails = () => {
             </div>
             {/* gallery-area-end */}
             {/* features-area */}
-            <section className="features-area features-pb-80">
+            {/* <section className="features-area features-pb-80">
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-4 col-md-6 col-sm-10">
@@ -318,7 +316,7 @@ const BlogDetails = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
             {/* features-area-end */}
             {/* direction-area */}
             <section className="direction-area">
@@ -363,7 +361,9 @@ const BlogDetails = () => {
                         className="button-58"
                         data-wow-delay=".4s"
                       >
-                        <span class="text button-dark-57">Get Directions</span>
+                        <span className="text button-dark-57">
+                          Get Directions
+                        </span>
                         <span>Get Directions</span>
                       </Link>
                     </div>

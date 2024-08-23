@@ -1,63 +1,61 @@
 import Layout from "@/components/layout/Layout";
-import Parallax from "@/components/sections/Parallax";
 import { websiteData } from "@/websiteData";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-const CounterUp = dynamic(() => import("@/components/elements/CounterUp"), {
-  ssr: false,
-});
+// const CounterUp = dynamic(() => import("@/components/elements/CounterUp"), {
+//   ssr: false,
+// });
 
-const swiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
-  slidesPerView: 5,
-  spaceBetween: 30,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop: true,
+// const swiperOptions = {
+//   modules: [Autoplay, Pagination, Navigation],
+//   slidesPerView: 5,
+//   spaceBetween: 30,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   loop: true,
 
-  // Navigation
-  navigation: {
-    nextEl: ".h1n",
-    prevEl: ".h1p",
-  },
+//   // Navigation
+//   navigation: {
+//     nextEl: ".h1n",
+//     prevEl: ".h1p",
+//   },
 
-  // Pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+//   // Pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 30,
-    },
-    575: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    767: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    991: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-    1199: {
-      slidesPerView: 5,
-      spaceBetween: 30,
-    },
-    1350: {
-      slidesPerView: 5,
-      spaceBetween: 30,
-    },
-  },
-};
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1,
+//       spaceBetween: 30,
+//     },
+//     575: {
+//       slidesPerView: 2,
+//       spaceBetween: 30,
+//     },
+//     767: {
+//       slidesPerView: 3,
+//       spaceBetween: 30,
+//     },
+//     991: {
+//       slidesPerView: 4,
+//       spaceBetween: 30,
+//     },
+//     1199: {
+//       slidesPerView: 5,
+//       spaceBetween: 30,
+//     },
+//     1350: {
+//       slidesPerView: 5,
+//       spaceBetween: 30,
+//     },
+//   },
+// };
 
 export default function Overview() {
   return (

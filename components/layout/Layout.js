@@ -1,14 +1,11 @@
+"use client";
 import { useEffect, useState } from "react";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "./Footer";
-import Header1 from "./Header1";
-import Header2 from "./Header2";
-import Header3 from "./Header3";
-import Header4 from "./Header4";
+
 import Header5 from "./Header5";
 import Header6 from "./Header6";
-import Header7 from "./Header7";
-import Header8 from "./Header8";
+
 import PageHead from "./PageHead";
 import { websiteData } from "@/websiteData";
 
@@ -50,7 +47,7 @@ export default function Layout({
   return (
     <>
       <PageHead headTitle={headTitle} />
-      {!headerStyle && <Header1 handleMobileMenu={handleMobileMenu} />}
+      {/* {!headerStyle && <Header1 handleMobileMenu={handleMobileMenu} />}
       {headerStyle == 1 ? (
         <Header1 scroll={scroll} handleMobileMenu={handleMobileMenu} />
       ) : null}
@@ -58,17 +55,17 @@ export default function Layout({
       {headerStyle == 3 ? (
         <Header3 scroll={scroll} handleMobileMenu={handleMobileMenu} />
       ) : null}
-      {headerStyle == 4 ? <Header4 /> : null}
+      {headerStyle == 4 ? <Header4 /> : null} */}
       {headerStyle == 5 ? (
         <Header5 scroll={scroll} handleMobileMenu={handleMobileMenu} />
       ) : null}
       {headerStyle == 6 ? (
         <Header6 scroll={scroll} handleMobileMenu={handleMobileMenu} />
       ) : null}
-      {headerStyle == 7 ? (
+      {/* {headerStyle == 7 ? (
         <Header7 scroll={scroll} handleMobileMenu={handleMobileMenu} />
       ) : null}
-      {headerStyle == 8 ? <Header8 /> : null}
+      {headerStyle == 8 ? <Header8 /> : null} */}
 
       <main>
         {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
