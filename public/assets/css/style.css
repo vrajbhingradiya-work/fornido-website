@@ -4520,6 +4520,13 @@ label {
     background-position: center;
     
 }
+.footer-links-text{
+    color: var(--tg-silver);
+}
+.footer-links-text:hover{
+    color: var(--tg-white);
+    transition: all .3s ease-in-out 0.2s;
+}
 
 
 .footer-top {

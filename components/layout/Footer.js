@@ -30,7 +30,7 @@ export default function Footer1({}) {
                     <h2 className="fw-title ">Contact</h2>
                     <div className="footer-contact ">
                       <ul className="list-wrap">
-                        <li className="">
+                        <li className="footer-links-text">
                           {
                             companyProfile.contactInformation.addressInfo
                               .mainOffice.address.addressLine1
