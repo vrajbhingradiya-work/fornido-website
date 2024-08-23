@@ -62,6 +62,13 @@
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'bembo Small';
+        src: url('../fonts/fonts/bembo/Bembo/Bembo\ Regular.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
 /* @font-face {
     font-family: 'Didot LT Std Italic';
     src: url('/fonts/Didot LT Std Italic.otf') format('opentype');
@@ -75,8 +82,8 @@
 
 
 :root {
-    --tg-body-font-family     : 'Didot Regular', serif;
-    --tg-heading-font-family  : 'Didot Regular', serif;
+    --tg-body-font-family     : 'bembo Small', serif;
+    --tg-heading-font-family  : 'bembo Small', serif;
     --tg-primary-color        :  #9b7250;
     --tg-secondary-color      : #2b2b27;
     --tg-body-background-color: #FEFFFB;
@@ -3414,6 +3421,8 @@ label {
 
 .team-details-content {
     margin-left: 80px;
+    margin-top: 80px;
+
 }
 
 .team-details-content .sub-title {

@@ -534,7 +534,7 @@ export default function Overview() {
                 </div>
                 <div className="col-lg-7">
                   <div className="team-details-content">
-                    <span className="sub-title">The visionary</span>
+                    <span className="sub-title">From the Founder</span>
                     <h2 className="title">Sahil Anand</h2>
                     <div className="td-contact">
                       <ul className="list-wrap">
