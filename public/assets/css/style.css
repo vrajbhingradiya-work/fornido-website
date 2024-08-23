@@ -127,6 +127,13 @@ body{
     background-color: var(--tg-body-background-color);
     text-decoration: none;
 }
+label, input, p, div, a, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--tg-body-font-family) !important;
+}
+
+a{
+    text-decoration: none !important;
+}
 
 img,
 .img {
