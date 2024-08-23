@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <>
-      <Layout headerStyle={6}>
+      <Layout headerStyle={5}>
         {/* breadcrumb-area */}
         <section className="breadcrumb-area">
           <div className="container">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
+import { websiteData } from "@/websiteData";
 
 export default function Header6({ handleMobileMenu, scroll }) {
   return (
@@ -39,7 +40,7 @@ export default function Header6({ handleMobileMenu, scroll }) {
                     </div>
                     <div className="header-action">
                       <ul className="list-wrap">
-                        <li className="header-social">
+                        {/* <li className="header-social">
                           <ul className="list-wrap">
                             <li>
                               <Link href="#">
@@ -62,9 +63,19 @@ export default function Header6({ handleMobileMenu, scroll }) {
                               </Link>
                             </li>
                           </ul>
-                        </li>
+                        </li> */}
                         <li className="header-contact">
-                          <Link href="tel:0123456789">+7 495 127 5451</Link>
+                          <Link
+                            href={`tel:${websiteData.companyProfile.contactInformation.contactNumber.replace(
+                              "-",
+                              ""
+                            )}`}
+                          >
+                            {
+                              websiteData.companyProfile.contactInformation
+                                .contactNumber
+                            }
+                          </Link>
                         </li>
                       </ul>
                     </div>

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import { websiteData } from "@/websiteData";
 import Link from "next/link";
 export default function TeamDetails() {
   return (
@@ -15,21 +16,36 @@ export default function TeamDetails() {
               </div>
               <div className="col-lg-7">
                 <div className="team-details-content">
-                  <span className="sub-title">Architect</span>
-                  <h2 className="title">Johan Johnson</h2>
+                  <span className="sub-title">The Visionary</span>
+                  <h2 className="title">Sahil Anand</h2>
                   <div className="td-contact">
                     <ul className="list-wrap">
                       <li>
-                        <Link href="mailto:johanjohnson@mail.com">
-                          johanjohnson@mail.com
+                        <Link
+                          href={`mailto:${websiteData.companyProfile.contactInformation.contactEmail}`}
+                        >
+                          {
+                            websiteData.companyProfile.contactInformation
+                              .contactEmail
+                          }
                         </Link>
                       </li>
                       <li>
-                        <Link href="tel:0123456789">+7 875 647 6689</Link>
+                        <Link
+                          href={`tel:${websiteData.companyProfile.contactInformation.contactNumber.replace(
+                            "-",
+                            ""
+                          )}`}
+                        >
+                          {
+                            websiteData.companyProfile.contactInformation
+                              .contactNumber
+                          }
+                        </Link>
                       </li>
                     </ul>
                   </div>
-                  <div className="td-social">
+                  {/* <div className="td-social">
                     <ul className="list-wrap">
                       <li>
                         <Link href="#">
@@ -52,7 +68,7 @@ export default function TeamDetails() {
                         </Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   <p>
                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
                     odit aut fugit, sed quia consequuntur magni dolores eos qui
@@ -68,9 +84,9 @@ export default function TeamDetails() {
                     because those who do not know how to pursue pleasure
                     rationally encounter consequences
                   </p>
-                  <div className="sine-img mt-40">
+                  {/* <div className="sine-img mt-40">
                     <img src="/assets/img/images/sine.png" alt="" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -84,7 +100,7 @@ export default function TeamDetails() {
               <div className="col-xl-8 col-lg-10">
                 <div className="section-title text-center mb-55">
                   <span className="sub-title">leave a message</span>
-                  <h2 className="title">Contact with Johnson</h2>
+                  <h2 className="title">Contact with Sahil Anand</h2>
                 </div>
                 <div className="contact-form-wrap">
                   <form action="#">

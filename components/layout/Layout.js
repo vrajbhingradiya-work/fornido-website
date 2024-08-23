@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import BackToTop from "../elements/BackToTop";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "./Footer";
 import Header1 from "./Header1";

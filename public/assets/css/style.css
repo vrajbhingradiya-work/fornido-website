@@ -2485,6 +2485,7 @@ label {
 ===============================*/
 .section-title .sub-title {
     text-transform: uppercase;
+    font-family: var(--tg-body-font-family) !important;
     font-size     : 14px;
     font-weight   : 500;
     display       : block;
@@ -2501,6 +2502,7 @@ label {
 
 .about-content p {
     margin-bottom: 55px;
+    font-family: var(--tg-body-font-family);
 }
 
 /* about-two */
@@ -2513,6 +2515,7 @@ label {
 }
 
 .about-area-two .about-content p {
+    font-family: var(--tg-body-font-family);
     margin-bottom: 45px;
 }
 
@@ -2533,6 +2536,7 @@ label {
 
 .mission-content p {
     margin-bottom: 45px;
+    font-family: var(--tg-body-font-family) !important;
 }
 
 /*=============================
@@ -2544,6 +2548,7 @@ label {
 
 .vision-content p {
     margin-bottom: 50px;
+    font-family: var(--tg-body-font-family) !important;
 }
 
 .vision-img img {
@@ -2863,6 +2868,7 @@ label {
 }
 
 .project-content span {
+    font-family: var(--tg-body-font-family) !important;
     display       : block;
     text-transform: uppercase;
     font-weight   : 500;
@@ -4167,6 +4173,7 @@ label {
 .comment-form .comment-field textarea::placeholder,
 .comment-form .comment-field input::placeholder {
     color      : var(--tg-secondary-color);
+    font-family: var(--tg-body-font-family);
     font-weight: 400;
     font-size  : 15px;
 }
@@ -4179,6 +4186,7 @@ label {
 .comment-respond .comment-form .form-check {
     justify-content: left;
     margin-bottom  : 55px;
+    font-family: var(--tg-body-font-family) !important;
 }
 
 
@@ -4336,11 +4344,14 @@ label {
     padding      : 13px 25px;
     height       : 56px;
     background   : transparent;
+    font-family: var(--tg-body-font-family);
 }
 
 .newsletter-form .list-wrap li input::placeholder {
     font-size: 15px;
     color    : var(--tg-secondary-color);
+    font-family: var(--tg-body-font-family);
+
 }
 
 .contact-form-wrap .form-submit input[type="submit"],
@@ -4348,6 +4359,7 @@ label {
     border        : none;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    font-family: var(--tg-body-font-family);
     font-size     : 14px;
     font-weight   : 500;
     border-radius : 8px;
@@ -4522,6 +4534,7 @@ label {
 }
 .footer-links-text{
     color: var(--tg-silver);
+    font-family: var(--tg-body-font-family);
 }
 .footer-links-text:hover{
     color: var(--tg-white);

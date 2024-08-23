@@ -61,7 +61,7 @@ const swiperOptions = {
 export default function Overview() {
   return (
     <>
-      <Layout headerStyle={6}>
+      <Layout headerStyle={5}>
         <section className="breadcrumb-area">
           <div className="container">
             <div className="row">
