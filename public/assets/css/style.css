@@ -714,7 +714,6 @@ label {
     padding       : 48px 20px;
     display       : block;
     line-height   : 1;
-    color: var(--tg-white);
     position      : relative;
     z-index       : 1;
     letter-spacing: 0.04em;
@@ -724,6 +723,9 @@ label {
 
 .text-white{
     color:var(--tg-white) !important;
+}
+.text-dark{
+    color:var(--tg-secondary-color) !important;
 }
 
 .navbar-wrap>ul>li.active>a,

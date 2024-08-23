@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Menu({ isShow }) {
   const router = useRouter();
+  const path = router.pathname;
 
   const [isActive, setIsActive] = useState({
     status: false,
@@ -27,62 +28,87 @@ export default function Menu({ isShow }) {
     <>
       <ul className="navigation">
         <li className="menu-item-has-children">
-          <Link href="/">Home</Link>
+          <Link
+            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            href="/"
+          >
+            Home
+          </Link>
           {/* <ul className="sub-menu" >
-                        <li><Link href="/">Home One</Link></li>
-                        <li><Link href="/index-2">Home Two</Link></li>
-                        <li><Link href="/index-3">Home Three</Link></li>
-                        <li><Link href="/index-4">Home Four</Link></li>
-                        <li><Link href="/index-5">Home Five</Link></li>
-                        <li><Link href="/index-6">Home Six</Link></li>
-                        <li><Link href="/index-7">Home Seven</Link></li>
-                        <li><Link href="/index-8">Home Eight</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/">Home One</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-2">Home Two</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-3">Home Three</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-4">Home Four</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-5">Home Five</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-6">Home Six</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-7">Home Seven</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/index-8">Home Eight</Link></li>
                     </ul> */}
         </li>
         <li className="menu-item-has-children">
-          <Link href="/about-us">About</Link>
+          <Link
+            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            href="/about-us"
+          >
+            About
+          </Link>
           {/* <ul className="sub-menu" >
-                        <li><Link href="/overview">Overview</Link></li>
-                        <li><Link href="/mission">Mission</Link></li>
-                        <li><Link href="/team">Our Team</Link></li>
-                        <li><Link href="/team-details">Team Profile</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/overview">Overview</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/mission">Mission</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/team">Our Team</Link></li>
+                        <li><Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/team-details">Team Profile</Link></li>
                     </ul> */}
         </li>
         <li className="menu-item-has-children">
-          <Link href="/#projects">Projects</Link>
+          <Link
+            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            href="/#projects"
+          >
+            Projects
+          </Link>
           <ul className="sub-menu">
             {/* <li>
-              <Link href="/project">Projects Two Col</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/project">Projects Two Col</Link>
             </li>
             <li>
-              <Link href="/project-two">Projects Three Col</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/project-two">Projects Three Col</Link>
             </li>
             <li>
-              <Link href="/project-three">Projects Four Col</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/project-three">Projects Four Col</Link>
             </li> */}
             <li>
-              <Link href="/project/1">Projects One</Link>
+              <Link
+                className={`${path === "/" ? "text-white" : "text-dark"}`}
+                href="/project/1"
+              >
+                Projects One
+              </Link>
             </li>
             <li>
-              <Link href="/project/2">Projects Two</Link>
+              <Link
+                className={`${path === "/" ? "text-white" : "text-dark"}`}
+                href="/project/2"
+              >
+                Projects Two
+              </Link>
             </li>
           </ul>
         </li>
         {/* blog-menu-start */}
         {/* <li className="menu-item-has-children">
-          <Link href="#">blog</Link>
+          <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="#">blog</Link>
           <ul className="sub-menu">
             <li>
-              <Link href="/blog">Blog Grid</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/blog">Blog Grid</Link>
             </li>
             <li>
-              <Link href="/blog-sidebar">Blog Grid Sidebar</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/blog-sidebar">Blog Grid Sidebar</Link>
             </li>
             <li>
-              <Link href="/blog-list">Blog Standard</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/blog-list">Blog Standard</Link>
             </li>
             <li>
-              <Link href="/blog/1">Blog Single</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/blog/1">Blog Single</Link>
             </li>
           </ul>
         </li> */}
@@ -91,25 +117,30 @@ export default function Menu({ isShow }) {
         {/* pages-extra-start */}
 
         {/* <li className="menu-item-has-children">
-          <Link href="#">Pages</Link>
+          <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="#">Pages</Link>
           <ul className="sub-menu">
             <li>
-              <Link href="/sirvices">Services</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/sirvices">Services</Link>
             </li>
             <li>
-              <Link href="/testimonial">Testimonials</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/testimonial">Testimonials</Link>
             </li>
             <li>
-              <Link href="/faq">Faq</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/faq">Faq</Link>
             </li>
             <li>
-              <Link href="/404">404 Error</Link>
+              <Link className={`${path==="/" ? "text-white" : "text-dark"}`} href="/404">404 Error</Link>
             </li>
           </ul>
         </li> */}
         {/* pages-extra-end */}
         <li>
-          <Link href="/contact">contact</Link>
+          <Link
+            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            href="/contact"
+          >
+            contact
+          </Link>
         </li>
       </ul>
     </>
