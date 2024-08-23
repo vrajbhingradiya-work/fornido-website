@@ -1,4 +1,4 @@
-import Preloader from "@/components/elements/Preloader";
+"use client";
 import { useEffect, useState } from "react";
 
 import "swiper/css";
@@ -16,6 +16,7 @@ import "../public/assets/css/slick.css";
 import "../public/assets/css/spacing.css";
 import "../public/assets/css/style.css";
 import "../public/assets/css/swiper-bundle.min.css";
+import Preloader from "../components/elements/Preloader";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);

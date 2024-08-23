@@ -1,3 +1,4 @@
+import InquiryForm from "@/components/elements/InquiryForm";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 export default function Contact() {
@@ -106,64 +107,7 @@ export default function Contact() {
         </div>
         {/* contact-map-end */}
         {/* contact-form-area */}
-        <section className="contact-form-area pt-140 pb-140">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-6 col-lg-8">
-                <div className="section-title text-center mb-55">
-                  <span className="sub-title">leave a message</span>
-                  <h2 className="title">Let’s make something new together</h2>
-                </div>
-                <div className="contact-form-wrap">
-                  <form action="#">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-grp">
-                          <input
-                            type="text"
-                            placeholder="Your name"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="form-grp">
-                          <input
-                            type="text"
-                            placeholder="Phone number"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="form-grp">
-                      <textarea
-                        name="message"
-                        placeholder="Write message"
-                        required="required"
-                        defaultValue={""}
-                      />
-                    </div>
-                    <div className="form-check">
-                      <input
-                        type="checkbox"
-                        className="form-check-input"
-                        id="checkbox"
-                      />
-                      <label htmlFor="checkbox">
-                        I accept <span>Terms &amp Conditions</span> for
-                        processing personal data
-                      </label>
-                    </div>
-                    <div className="form-submit">
-                      <input type="submit" defaultValue="submit" />
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <InquiryForm />
         {/* contact-form-area-end */}
       </Layout>
     </>

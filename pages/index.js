@@ -1,9 +1,9 @@
-import Layout from "@/components/layout/Layout";
 import About from "@/components/sections/About";
 import Banner4 from "@/components/sections/Banner4";
-import Newsletter from "@/components/sections/Newsletter";
 import Project3 from "@/components/sections/Project3";
 import Services2 from "@/components/sections/Services2";
+import InquiryForm from "../components/elements/InquiryForm";
+import Layout from "../components/layout/Layout";
 export default function Home5() {
   return (
     <>
@@ -20,8 +20,8 @@ export default function Home5() {
         {/* <Slider /> */}
         {/* <Parallax / */}
         {/* <Team /> */}
-        <Newsletter />
         {/* <Blog2 /> */}
+        <InquiryForm />
       </Layout>
     </>
   );

@@ -96,11 +96,13 @@ export default function Header5({ handleMobileMenu, scroll }) {
                           }
                           alt="Logo"
                         />
-
-                        {/* if homepage ? " scroll behaviour changes" :  */}
                       </Link>
                     </div>
-                    <div className="navbar-wrap main-menu d-none d-lg-flex">
+                    <div
+                      className={`navbar-wrap main-menu d-none d-lg-flex ${
+                        path !== "/" ? "text-dark" : "text-white"
+                      }`}
+                    >
                       <Menu />
                     </div>
                   </nav>

@@ -119,8 +119,26 @@
     --youtube                 : #E53935;
     --skype                   : #00aff0;
 }
+
 a{
   text-decoration: none;
+}
+
+.brochure-icon{
+    width:100px !important;
+    height: 50px;
+    padding: 5px;
+}
+
+.content-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.text-dark{
+    color: var(--tg-secondary-color) !important;
 }
 
 
@@ -190,7 +208,11 @@ a:hover,
     text-decoration: none;
 }
 
-a,
+a {
+    outline        : medium none;
+    text-decoration: none;
+}
+
 button {
     color          : var(--tg-primary-color);
     outline        : medium none;
@@ -689,7 +711,6 @@ label {
     font-size     : 14px;
     text-decoration: none;
     font-weight   : 500;
-    color         : var(--tg-white);
     padding       : 48px 20px;
     display       : block;
     line-height   : 1;
@@ -697,11 +718,16 @@ label {
     z-index       : 1;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+
+}
+
+.text-white{
+    color:var(--tg-white) !important;
 }
 
 .navbar-wrap>ul>li.active>a,
 .navbar-wrap>ul>li:hover>a {
-    color: var(--tg-primary-color) !important;
+    color: var(--tg-primary-color) ;
 }
 
 .main-menu .navigation li.menu-item-has-children .dropdown-btn {
@@ -3291,7 +3317,7 @@ label {
     gap            : 24px;
 }
 
-.file-wrap .list-wrap li a {
+.file-wrap .list-wrap li button {
     width          : 128px;
     height         : 168px;
     border-radius  : 8px;
@@ -3300,7 +3326,7 @@ label {
     justify-content: center;
     text-align     : center;
     padding        : 30px 20px 15px;
-    border         : 1.5px dashed var(--tg-primary-color);
+    border         : 1.5px dashed var(--tg-secondary-color);
     letter-spacing : 0.04em;
     text-transform : uppercase;
     font-weight    : 500;
