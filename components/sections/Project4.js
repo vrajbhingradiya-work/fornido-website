@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { websiteData } from "@/websiteData"; // Import the data
+import { websiteData } from "../../websiteData";
 
 export default function Project4() {
   const projectsSectionData = websiteData.homePage.projectsSection; // Access the relevant data

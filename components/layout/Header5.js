@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
-import { websiteData } from "@/websiteData";
+import { websiteData } from "../../websiteData";
 import { useRouter } from "next/router";
 export default function Header5({ handleMobileMenu, scroll }) {
   const companyProfile = websiteData.companyProfile;

@@ -2,12 +2,10 @@
 import { useEffect, useState } from "react";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "./Footer";
-
 import Header5 from "./Header5";
 import Header6 from "./Header6";
-
 import PageHead from "./PageHead";
-import { websiteData } from "@/websiteData";
+import { websiteData } from "../../websiteData";
 
 export default function Layout({
   headerStyle,

@@ -1,4 +1,4 @@
-import { websiteData } from "@/websiteData";
+import { websiteData } from "../../websiteData";
 import Link from "next/link";
 
 export default function About() {

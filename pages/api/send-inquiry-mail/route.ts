@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 import * as React from "react";
-import EmailTemplate from "../../../emails/EmailTemplate";
+import InquiryEmailTemplate from "../../../emails/InquiryEmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       from: "information@alroshangroups.com",
       to: ["lll.rg3.lll@gmail.com"],
       subject: `Inquiry Raised by ${name}`,
-      react: EmailTemplate({
+      react: InquiryEmailTemplate({
         clientName: name,
         clientNumber: phone,
       }) as React.ReactElement,

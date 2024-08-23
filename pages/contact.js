@@ -1,5 +1,5 @@
-import InquiryForm from "@/components/elements/InquiryForm";
-import Layout from "@/components/layout/Layout";
+import InquiryForm from "../components/elements/InquiryForm";
+import Layout from "../components/layout/Layout";
 import Link from "next/link";
 export default function Contact() {
   return (

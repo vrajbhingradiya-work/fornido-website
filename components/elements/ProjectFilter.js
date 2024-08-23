@@ -1,5 +1,5 @@
-import ProjectItem from "@/components/elements/ProjectItem";
-import Pagination from "@/components/filter/Pagination";
+import ProjectItem from "../../components/elements/ProjectItem";
+import Pagination from "../../components/filter/Pagination";
 import { useEffect, useState } from "react";
 import projectData from "../../util/project.json";
 export default function ProjectFilter({ col }) {

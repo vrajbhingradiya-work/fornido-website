@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/layout/Layout";
 import projectData from "../../util/project.json";
 
-import ViodePopup from "@/components/elements/ViodePopup";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -16,8 +15,8 @@ import {
 } from "react-icons/fa";
 import { TbMoneybag } from "react-icons/tb";
 import { CiFileOn } from "react-icons/ci";
-import BrochureDownloadForm from "@/components/elements/BrochureDownloadForm";
-import InquiryForm from "@/components/elements/InquiryForm";
+import BrochureDownloadForm from "../../components/elements/BrochureDownloadForm";
+import InquiryForm from "../../components/elements/InquiryForm";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -221,7 +220,6 @@ const ProjectDetails = () => {
                             src="/assets/img/gallery/gallery_img02.jpg"
                             alt=""
                           />
-                          <ViodePopup />
                         </SwiperSlide>
                         <SwiperSlide className="gallery-item">
                           <div className="apartment-view">
@@ -249,7 +247,7 @@ const ProjectDetails = () => {
                             src="/assets/img/gallery/gallery_img02.jpg"
                             alt=""
                           />
-                          <ViodePopup />
+                          {/* <ViodePopup /> */}
                         </SwiperSlide>
                         <SwiperSlide className="gallery-item">
                           <div className="apartment-view">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { websiteData } from "@/websiteData";
+import { websiteData } from "../../websiteData";
 export default function Services() {
   const { sectionHeading, heading, services } =
     websiteData.homePage.servicesSection;

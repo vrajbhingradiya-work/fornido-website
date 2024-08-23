@@ -1,7 +1,7 @@
-import About from "@/components/sections/About";
-import Banner4 from "@/components/sections/Banner4";
-import Project3 from "@/components/sections/Project3";
-import Services2 from "@/components/sections/Services2";
+import About from "../components/sections/About";
+import Banner4 from "../components/sections/Banner4";
+import Project3 from "../components/sections/Project3";
+import Services2 from "../components/sections/Services2";
 import InquiryForm from "../components/elements/InquiryForm";
 import Layout from "../components/layout/Layout";
 export default function Home5() {

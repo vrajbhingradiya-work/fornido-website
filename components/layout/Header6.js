@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
-import { websiteData } from "@/websiteData";
+import { websiteData } from "../../websiteData";
 
 export default function Header6({ handleMobileMenu, scroll }) {
   return (
