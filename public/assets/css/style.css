@@ -97,7 +97,7 @@
     --tg-heading-font-weight  : 500;
     --tg-body-line-height     : 1.86;
     --tg-heading-line-height  : 1.2;
-    --tg-logo                 : #DFD3C9;
+    --tg-logo                 : #ede1d6;
     --tg-blue                 : #9b7250;
     --tg-indigo               : #6610f2;
     --tg-purple               : #6f42c1;
@@ -108,7 +108,8 @@
     --tg-green                : #198754;
     --tg-teal                 : #20c997;
     --tg-cyan                 : #0dcaf0;
-    --tg-white                : #FBFBFB;
+    --tg-white                : #ede1d6; 
+    /* //ECRU */
     --tg-black                : #272727;
     --tg-gray                 : #E2E2E2;
     --tg-silver               : #9B9B9B;
@@ -4974,12 +4975,10 @@ label {
 
 /* custom written by Vraj */
 .website-logo{
-    width: 80px;
-    height:80px;
+    width: 180px;
 }
 .website-footer-logo{
-    width: 200px;
-    height:200px;
+    width: 500px;
     transform: translate( 0px,-30px) ;
     transition: all 0.3s ease-in-out;
 }

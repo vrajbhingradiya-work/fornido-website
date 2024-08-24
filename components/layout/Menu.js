@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Menu({ isShow }) {
+export default function Menu({ isShow, scroll }) {
   const router = useRouter();
   const path = router.pathname;
 
@@ -29,7 +29,13 @@ export default function Menu({ isShow }) {
       <ul className="navigation">
         <li className="menu-item-has-children">
           <Link
-            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            className={`${
+              path !== "/"
+                ? "logo-color-dark"
+                : scroll
+                ? "logo-color-dark"
+                : "logo-color"
+            }`}
             href="/"
           >
             Home
@@ -47,7 +53,13 @@ export default function Menu({ isShow }) {
         </li>
         <li className="menu-item-has-children">
           <Link
-            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            className={`${
+              path !== "/"
+                ? "logo-color-dark"
+                : scroll
+                ? "logo-color-dark"
+                : "logo-color"
+            }`}
             href="/about-us"
           >
             About
@@ -61,7 +73,13 @@ export default function Menu({ isShow }) {
         </li>
         <li className="menu-item-has-children">
           <Link
-            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            className={`${
+              path !== "/"
+                ? "logo-color-dark"
+                : scroll
+                ? "logo-color-dark"
+                : "logo-color"
+            }`}
             href="/#projects"
           >
             Projects
@@ -78,7 +96,13 @@ export default function Menu({ isShow }) {
             </li> */}
             <li>
               <Link
-                className={`${path === "/" ? "text-white" : "text-dark"}`}
+                className={`${
+                  path !== "/"
+                    ? "logo-color-dark"
+                    : scroll
+                    ? "logo-color-dark"
+                    : "logo-color"
+                }`}
                 href="/project/1"
               >
                 Projects One
@@ -86,7 +110,13 @@ export default function Menu({ isShow }) {
             </li>
             <li>
               <Link
-                className={`${path === "/" ? "text-white" : "text-dark"}`}
+                className={`${
+                  path !== "/"
+                    ? "logo-color-dark"
+                    : scroll
+                    ? "logo-color-dark"
+                    : "logo-color"
+                }`}
                 href="/project/2"
               >
                 Projects Two
@@ -136,7 +166,13 @@ export default function Menu({ isShow }) {
         {/* pages-extra-end */}
         <li>
           <Link
-            className={`${path === "/" ? "text-white" : "text-dark"}`}
+            className={`${
+              path !== "/"
+                ? "logo-color-dark"
+                : scroll
+                ? "logo-color-dark"
+                : "logo-color"
+            }`}
             href="/contact"
           >
             contact

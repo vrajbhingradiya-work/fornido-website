@@ -103,7 +103,7 @@ export default function Header5({ handleMobileMenu, scroll }) {
                         path !== "/" ? "text-dark" : "text-white"
                       }`}
                     >
-                      <Menu />
+                      <Menu scroll={scroll} />
                     </div>
                   </nav>
                 </div>
