@@ -1221,7 +1221,7 @@ label {
 
 .header-style-four .navbar-wrap ul li a {
     padding: 48px 0;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
@@ -4740,6 +4740,8 @@ label {
     align-items    : center;
     justify-content: center;
     border         : 1.3px solid var(--tg-silver);
+    color: var(--tg-silver) !important;
+    fill: var(--tg-silver) !important;
     border-radius  : 50%;
     font-size      : 14px;
     text-decoration: none;
@@ -5005,11 +5007,11 @@ label {
     
 }
 
-.digital-fry-text {
+.digital-fry-text a {
     transition: all 0.3s ease-in-out;
   }
   
-  .digital-fry-text:hover {
+  .digital-fry-text a:hover {
     letter-spacing: 0.05em; /* Adjust for wider tracking */
     color: white;
   }
