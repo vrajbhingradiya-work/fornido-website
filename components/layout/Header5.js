@@ -31,6 +31,30 @@ export default function Header5({ handleMobileMenu, scroll }) {
               <div className="col-lg-6">
                 <div className="header-top-right">
                   <ul className="list-wrap">
+                    <li className="header-social">
+                      <ul className="list-wrap">
+                        <li>
+                          <Link href="#">
+                            <i className="fab fa-facebook-f" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#">
+                            <i className="fab fa-instagram" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#">
+                            <i className="fab fa-twitter" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="#">
+                            <i className="fab fa-linkedin-in" />
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
                     <li>
                       <Link
                         href={`mailto:${websiteData.companyProfile.contactInformation.contactEmail}`}
@@ -124,7 +148,7 @@ export default function Header5({ handleMobileMenu, scroll }) {
                     <div className="menu-outer">
                       <MobileMenu />
                     </div>
-                    {/* <div className="social-links">
+                    <div className="social-links">
                       <ul className="clearfix list-wrap">
                         <li>
                           <Link href="#">
@@ -152,7 +176,7 @@ export default function Header5({ handleMobileMenu, scroll }) {
                           </Link>
                         </li>
                       </ul>
-                    </div> */}
+                    </div>
                   </nav>
                 </div>
                 <div className="menu-backdrop" onClick={handleMobileMenu} />

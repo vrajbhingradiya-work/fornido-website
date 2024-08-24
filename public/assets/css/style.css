@@ -108,7 +108,8 @@
     --tg-green                : #198754;
     --tg-teal                 : #20c997;
     --tg-cyan                 : #0dcaf0;
-    --tg-white                : #ede1d6; 
+    --tg-ecru                : #ede1d6; 
+    --tg-white:#ffffff;
     /* //ECRU */
     --tg-black                : #272727;
     --tg-gray                 : #E2E2E2;
@@ -320,19 +321,19 @@ label {
 
 *::-moz-selection {
     background : var(--tg-primary-color);
-    color      : var(--tg-white);
+    color      : var(--tg-ecru);
     text-shadow: none;
 }
 
 ::-moz-selection {
     background : var(--tg-primary-color);
-    color      : var(--tg-white);
+    color      : var(--tg-ecru);
     text-shadow: none;
 }
 
 ::selection {
     background : var(--tg-primary-color);
-    color      : var(--tg-white);
+    color      : var(--tg-ecru);
     text-shadow: none;
 }
 
@@ -440,7 +441,7 @@ label {
     background      : var(--tg-secondary-color) none repeat scroll 0 0;
     border          : 1.3px solid var(--tg-primary-color);
     border-radius   : 8px;
-    color           : var(--tg-white);
+    color           : var(--tg-ecru);
     cursor          : pointer;
     display         : inline-flex;
     font-size       : 14px;
@@ -579,7 +580,7 @@ label {
 
     background  : var(--tg-secondary-color);
     border-color: var(--tg-secondary-color);
-    color       : var(--tg-white);
+    color       : var(--tg-ecru);
 }
 
 .transparent-btn {
@@ -592,7 +593,7 @@ label {
 .transparent-btn:hover {
     border-color: var(--tg-secondary-color);
     background  : var(--tg-secondary-color);
-    color       : var(--tg-white);
+    color       : var(--tg-ecru);
 }
 
 .breadcrumb>.active {
@@ -610,7 +611,7 @@ label {
     font-size    : 18px;
     border-radius: 3px;
     z-index      : 9;
-    color        : var(--tg-white);
+    color        : var(--tg-ecru);
     text-align   : center;
     cursor       : pointer;
     background   : var(--tg-primary-color);
@@ -665,7 +666,7 @@ label {
 }
 
 .header-mail a {
-    color          : var(--tg-white);
+    color          : var(--tg-ecru);
     font-family: var(--tg-body-font-family);
     
 }
@@ -675,7 +676,7 @@ label {
 }
 
 .header-contact a {
-    color: var(--tg-white);
+    color: var(--tg-ecru);
 }
 
 .header-contact a:hover {
@@ -709,7 +710,7 @@ label {
 }
 
 .navbar-wrap ul li a {
-    font-size     : 14px;
+    font-size     : 16px;
     text-decoration: none;
     font-weight   : 500;
     padding       : 48px 20px;
@@ -723,7 +724,7 @@ label {
 }
 
 .text-white{
-    color:var(--tg-white) !important;
+    color:var(--tg-ecru) !important;
 }
 .text-dark{
     color:var(--tg-secondary-color) !important;
@@ -759,7 +760,7 @@ label {
 }
 
 .header-action .header-btn .btn {
-    color    : var(--tg-white);
+    color    : var(--tg-ecru);
     font-size: 14px;
     padding  : 13px 22px;
 }
@@ -815,7 +816,7 @@ label {
 
 .navbar-wrap ul li .sub-menu li a:hover,
 .navbar-wrap ul li .sub-menu li.active a {
-    color: var(--tg-white);
+    color: var(--tg-ecru);
 }
 
 .navbar-wrap ul li:hover>.sub-menu {
@@ -890,7 +891,7 @@ label {
 }
 
 .header-action .header-contact ul li a {
-    color: var(--tg-white);
+    color: var(--tg-ecru);
 }
 
 .header-action .header-contact ul li:first-child a {
@@ -904,9 +905,9 @@ label {
     display        : flex;
     align-items    : center;
     justify-content: center;
-    border         : 1.3px solid var(--tg-white);
+    border         : 1.3px solid var(--tg-ecru);
     border-radius  : 8px;
-    color          : var(--tg-white);
+    color          : var(--tg-ecru);
     font-size      : 25px;
 }
 
@@ -924,7 +925,7 @@ label {
 .sidebar-menu-two .menu-icon span {
     height       : 2px;
     width        : 16px;
-    background   : var(--tg-white);
+    background   : var(--tg-ecru);
     border-radius: 30px;
     transition   : .15s linear;
 }
@@ -1130,7 +1131,7 @@ label {
     padding           : 10px 40px;
     font-size         : 48px;
     font-weight       : 500;
-    color             : var(--tg-white);
+    color             : var(--tg-ecru);
     font-family       : var(--tg-heading-font-family);
     text-transform    : capitalize;
     -webkit-transition: all 500ms ease;
@@ -1192,7 +1193,7 @@ label {
 }
 
 .header-top-right ul li a:hover {
-    color: var(--tg-primary-color);
+    color: var(--tg-white);
 }
 
 .header-style-four .transparent-header {
@@ -1252,23 +1253,26 @@ label {
     display    : flex;
     align-items: center;
     gap        : 8px;
+    padding: 4px;
 }
 
 .header-social .list-wrap li a {
-    width          : 40px;
-    height         : 40px;
+    width          : 30px;
+    height         : 30px;
+    text-decoration: none;
     display        : flex;
     align-items    : center;
     justify-content: center;
     border-radius  : 50%;
-    border         : 1.3px solid var(--tg-primary-color);
-    color          : var(--tg-primary-color);
+    border         : 1.3px solid var(--tg-silver);
+    color          : var(--tg-silver);
     font-size      : 14px;
 }
 
 .header-social .list-wrap li a:hover {
-    color     : var(--tg-white);
-    background: var(--tg-primary-color);
+    color     : var(--tg-ecru);
+    border         : 1.3px solid var(--tg-ecru);
+    /* background: var(--tg-primary-color); */
 }
 
 .header-style-five .header-action .header-contact a {
@@ -1320,7 +1324,7 @@ label {
 }
 
 .menu-area-seven {
-    background: var(--tg-white);
+    background: var(--tg-ecru);
 }
 
 .menu-area-seven .header-action .icon a {
@@ -1480,7 +1484,7 @@ label {
 
 .sidebar-social .list-wrap li a:hover {
     background: var(--tg-primary-color);
-    color     : var(--tg-white);
+    color     : var(--tg-ecru);
 }
 
 .main-content {
@@ -1525,7 +1529,7 @@ label {
     bottom        : 0;
     top           : 0;
     z-index       : 10;
-    background    : var(--tg-white);
+    background    : var(--tg-ecru);
 }
 
 .sidebar-menu-two .sidebar-contact {
@@ -1576,7 +1580,7 @@ label {
     transform         : translateX(-100%);
     height            : 100%;
     display           : block;
-    background-color  : var(--tg-white);
+    background-color  : var(--tg-ecru);
     z-index           : 9;
     -webkit-transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     -moz-transition   : all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1630,7 +1634,7 @@ label {
     line-height : 50px;
     cursor      : pointer;
     display     : none;
-    color       : var(--tg-white);
+    color       : var(--tg-ecru);
     margin-right: 30px;
     top         : 15px;
 }
@@ -1827,7 +1831,7 @@ label {
     text-align        : center;
     font-size         : 16px;
     line-height       : 32px;
-    color             : var(--tg-white);
+    color             : var(--tg-ecru);
     background        : var(--tg-secondary-color);
     cursor            : pointer;
     border-radius     : 2px;
@@ -1876,6 +1880,7 @@ label {
 
 .mobile-menu .social-links li a {
     display              : flex;
+    text-decoration: none;
     align-items          : center;
     justify-content      : center;
     width                : 40px;
@@ -1893,12 +1898,18 @@ label {
     -moz-border-radius   : 3px;
     -ms-border-radius    : 3px;
     -o-border-radius     : 3px;
+    transition: transform 300ms ease-in-out;
+    transform: scale(1);
+    
 }
 
 .mobile-menu .social-links li a:hover {
-    border-color: var(--tg-secondary-color);
-    background  : var(--tg-primary-color);
-    color       : var(--tg-white);
+    /* border-color: var(--tg-secondary-color); */
+    /* background  : var(--tg-primary-color); */
+    color       : var(--tg-secondary-color);
+    transform: scale(110%);
+
+
 }
 
 .menu-area .mobile-nav-toggler {
@@ -1907,7 +1918,6 @@ label {
     font-size  : 30px;
     cursor     : pointer;   
     line-height: 1;
-    
     display    : none;
     margin-top : 0px;
 }
@@ -2040,7 +2050,7 @@ label {
 }
 
 .slider-active .slick-dots li.slick-active button::after {
-    background: var(--tg-white)
+    background: var(--tg-ecru)
 }
 
 /*=============================
@@ -2055,13 +2065,13 @@ label {
     text-transform: uppercase;
     margin-bottom : 40px;
     line-height   : .8;
-    color         : var(--tg-white);
+    color         : var(--tg-ecru);
 }
 
 .banner-content p {
     width : 75%;
     margin: 0 auto 45px;
-    color : var(--tg-white);
+    color : var(--tg-ecru);
 }
 
 .banner-scroll-down {
@@ -2072,7 +2082,7 @@ label {
 }
 
 .banner-scroll-down a {
-    color     : var(--tg-white);
+    color     : var(--tg-ecru);
     display   : block;
     width     : 30px;
     height    : 50px;
@@ -2083,8 +2093,8 @@ label {
     display      : block;
     width        : 15px;
     height       : 15px;
-    border-bottom: 2px solid var(--tg-white);
-    border-right : 2px solid var(--tg-white);
+    border-bottom: 2px solid var(--tg-ecru);
+    border-right : 2px solid var(--tg-ecru);
     transform    : rotate(45deg);
     margin       : -10px 0 0 8px;
     animation    : animate 2s infinite;
@@ -2228,7 +2238,7 @@ label {
 
 .banner-social .list-wrap li a:hover {
     background: var(--tg-primary-color);
-    color     : var(--tg-white);
+    color     : var(--tg-ecru);
 }
 
 /* banner-four */
@@ -2278,8 +2288,8 @@ label {
 }
 
 /* .banner-area-five .banner-content .btn {
-    border-color       : var(--tg-white);
-    color              : var(--tg-white);
+    border-color       : var(--tg-ecru);
+    color              : var(--tg-ecru);
 }
 
 .banner-area-five .banner-content .btn:hover {
@@ -2737,7 +2747,7 @@ label {
     transform    : translate(-50%, -50%);
     border-radius: 50%;
     background   : transparent;
-    border       : 1.3px solid var(--tg-white);
+    border       : 1.3px solid var(--tg-ecru);
     z-index      : -1;
 }
 
@@ -2746,7 +2756,7 @@ label {
 }
 
 .feature-icon i {
-    color      : var(--tg-white);
+    color      : var(--tg-ecru);
     font-size  : 48px;
     line-height: 0;
 }
@@ -3209,7 +3219,7 @@ label {
     padding       : 7px 15px;
     border-radius : 8px;
     color         : var(--tg-secondary-color);
-    background    : var(--tg-white);
+    background    : var(--tg-ecru);
     z-index       : 1;
     position      : absolute;
     left          : 50%;
@@ -3395,14 +3405,14 @@ label {
 }
 
 .team-content .title {
-    color         : var(--tg-white);
+    color         : var(--tg-ecru);
     margin-bottom : 8px;
     text-transform: uppercase;
     font-size     : 20px;
 }
 
 .team-content .title a:hover {
-    color          : var(--tg-white);
+    color          : var(--tg-ecru);
     
 }
 
@@ -3412,7 +3422,7 @@ label {
     text-transform: uppercase;
     font-size     : 14px;
     font-weight   : 500;
-    color         : var(--tg-white);
+    color         : var(--tg-ecru);
 }
 
 .team-item-wrap .row {
@@ -3511,7 +3521,7 @@ label {
 
 .td-social .list-wrap li a:hover {
     background: var(--tg-primary-color);
-    color     : var(--tg-white);
+    color     : var(--tg-ecru);
 }
 
 /*=============================
@@ -3981,7 +3991,7 @@ label {
 
 .bw-social .list-wrap li a:hover {
     background-color: var(--tg-primary-color);
-    color           : var(--tg-white);
+    color           : var(--tg-ecru);
 }
 
 /* blog-details */
@@ -4074,7 +4084,7 @@ label {
 
 .blog-details-social .list-wrap li a:hover {
     background-color: var(--tg-primary-color);
-    color           : var(--tg-white);
+    color           : var(--tg-ecru);
 }
 
 .avatar-post {
@@ -4282,11 +4292,11 @@ label {
 .pagination-wrap .pagination .page-link:hover {
     background  : var(--tg-primary-color);
     border-color: var(--tg-secondary-color);
-    color       : var(--tg-white);
+    color       : var(--tg-ecru);
 }
 
 .pagination-wrap .pagination .page-link:focus {
-    color           : var(--tg-white);
+    color           : var(--tg-ecru);
     background-color: var(--tg-primary-color);
     outline         : 0;
     box-shadow      : none;
@@ -4415,7 +4425,7 @@ label {
     font-weight   : 500;
     border-radius : 8px;
     background    : var(--tg-primary-color);
-    color         : var(--tg-white);
+    color         : var(--tg-ecru);
     padding       : 16px 40px;
     transition    : .3s ease-in-out;
 }
@@ -4588,7 +4598,7 @@ label {
     font-family: var(--tg-body-font-family);
 }
 .footer-links-text:hover{
-    color: var(--tg-white);
+    color: var(--tg-ecru);
     transition: all .3s ease-in-out 0.2s;
 }
 
@@ -4602,7 +4612,7 @@ label {
 }
 
 .fw-title {
-    color         : var(--tg-white);
+    color         : var(--tg-ecru);
     font-size     : 22px;
     text-transform: uppercase;
     margin-bottom : 35px;
@@ -4627,7 +4637,7 @@ label {
 }
 
 .footer-contact .list-wrap li a:hover {
-    color: var(--tg-white);
+    color: var(--tg-ecru);
     
 }
 
@@ -4646,7 +4656,7 @@ label {
 }
 
 .footer-link .list-wrap li a:hover {
-    color: var(--tg-white);
+    color: var(--tg-ecru);
 }
 
 .footer-newsletter form {
@@ -4683,7 +4693,7 @@ label {
     display        : flex;
     align-items    : center;
     justify-content: center;
-    color          : var(--tg-white);
+    color          : var(--tg-ecru);
     background     : var(--tg-primary-color);
     font-size      : 14px;
     border-radius  : 0 8px 8px 0;
@@ -4705,7 +4715,7 @@ label {
 }
 
 .copyright-text p span {
-    color: var(--tg-white);
+    color: var(--tg-ecru);
 }
 
 .footer-social .list-wrap {
@@ -4723,12 +4733,13 @@ label {
 }
 
 .footer-social .list-wrap li a {
+    text-decoration: none;
     width          : 40px;
     height         : 40px;
     display        : flex;
     align-items    : center;
     justify-content: center;
-    border         : 1.3px solid var(--tg-primary-color);
+    border         : 1.3px solid var(--tg-silver);
     border-radius  : 50%;
     font-size      : 14px;
     text-decoration: none;
@@ -4737,13 +4748,14 @@ label {
 
 
 .footer-social .list-wrap li a:hover {
-    background: var(--tg-primary-color);
-    color     : var(--tg-white);
+    /* background: var(--tg-primary-color); */
+    color     : var(--tg-ecru);
+    border         : 1.3px solid var(--tg-ecru);
 }
 
 /* Preloader */
 #preloader {
-    background: var(--tg-white);
+    background: var(--tg-ecru);
     height    : 100%;
     width     : 100%;
     position  : fixed;
@@ -5893,7 +5905,7 @@ label {
         text-align: left;
     }
     .banner-area-two .banner-scroll-down a span {
-        border-color: var(--tg-white);
+        border-color: var(--tg-ecru);
     }
     .project-style-three .section-title .title {
         margin-bottom: 35px;

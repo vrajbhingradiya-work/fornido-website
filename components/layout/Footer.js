@@ -106,7 +106,7 @@ export default function Footer1({}) {
                       </Link>
                     </p>
                   </div>
-                  {/* <div className="footer-social">
+                  <div className="footer-social">
                     <ul className="list-wrap">
                       {footerData?.socials.map((item, index) => (
                         <li key={index}>
@@ -114,7 +114,7 @@ export default function Footer1({}) {
                         </li>
                       ))}
                     </ul>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
