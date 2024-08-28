@@ -1,3 +1,5 @@
+import ProjectDetails from "./pages/project/[id]";
+
 export const websiteData = {
   companyProfile: {
     logo: "<link to drive logo folder>",
@@ -69,7 +71,7 @@ export const websiteData = {
   },
   homePage: {
     heroSection: {
-      heading: "We’ll build your perfect home with our experience",
+      heading: "We'll create the home you've always dreamed of",
       bgVideoLink: "<link>",
       button: {
         title: "Learn More",
@@ -78,8 +80,8 @@ export const websiteData = {
     },
     aboutSection: {
       sectionHeading: "WHO WE ARE",
-      heading: "30 years of leadership in real estate sector",
-      text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut                  odit aut fugit, sed quia consequuntur magni dolores eos qui                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,                  qui dolorem ipsum quia dolor sit amet sed quia non numquam eius modi tempora incidunt",
+      heading: "30 years as a trusted leader in the real estate industry",
+      text: "For over three decades, FORNIDO has been a cornerstone in the global real estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions across the globe. Our portfolio spans multiple countries, offering a wide range of options to suit your lifestyle and investment goals. ",
       button: {
         title: "More About",
         link: "/about-us",
@@ -87,7 +89,7 @@ export const websiteData = {
     },
     projectsSection: {
       sectionHeading: "FEATURED PROJECTS",
-      heading: "DISCOVER OUR LATEST PROJECTS",
+      heading: "See What’s New: Ongoing and Completed Projects",
       buttonTitle: "LEARN MORE",
       projects: [
         {
@@ -113,8 +115,9 @@ export const websiteData = {
       ],
     },
     servicesSection: {
-      sectionHeading: "WHAT WE DO",
-      heading: "Creating a great tomorrow for everyone",
+      sectionHeading: "How about this?",
+      heading:
+        "Affordable Living Solutions, Turning Spaces into Affordable Comfort",
       services: [
         {
           image: "/assets/img/images/services_01.png",
@@ -175,128 +178,259 @@ export const websiteData = {
       sectionHeading: "WHO WE ARE",
       heading: "30 years of leadership in real estate sector",
       text: "<text>",
-      projectDetails: {
-        propertySize: "<number>",
-        priceRange: "<number>",
-        type: "<text>",
-        flatSize: "<number>",
-        status: "<text>",
+    },
+    projects: [
+      {
+        id: "1",
+
+        projectDetails: {
+          propertyName: "Your Spanish Oasis in Goa",
+          heading: " La Maarca",
+          text: "La Maarca is a stunning, independent villa showcasing exquisite Spanish design nestled within Goa's verdant landscape. Elevated on a hillside, this villa offers an exclusive living environment characterized by privacy and natural beauty.",
+          propertySize: "4187 SQFT",
+          priceRange: "<number>",
+          type: "Villa",
+          flatSize: "2847 SQFT",
+          status: "Under Construction",
+        },
+        projectImages: [
+          "/assets/img/project/la-maarca-images/01-compressed.jpg",
+          "/assets/img/project/la-maarca-images/02-compressed.jpg",
+          "/assets/img/project/la-maarca-images/03-compressed.jpg",
+          "/assets/img/project/la-maarca-images/04-compressed.jpg",
+          "/assets/img/project/la-maarca-images/05-compressed.jpeg",
+          "/assets/img/project/la-maarca-images/06-compressed.jpeg",
+          "/assets/img/project/la-maarca-images/07-compressed.jpg",
+          "/assets/img/project/la-maarca-images/08-compressed.jpg",
+        ],
+
+        projectFeatures: [
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+        ],
+
+        locationDetails: {
+          thumbnailImage:
+            "/assets/img/project/la-maarca-images/mapLocation.jpg",
+          sectionHeading: "Sodiem, GOA",
+          address: "Siolim,Sodiem, Goa",
+          locationLink: "https://maps.app.goo.gl/eykJmGYeWmjr7qgi9",
+          nearbyAmenities: {
+            superMarket: "<text>",
+            railwayStation: "<text>",
+            airport: "<text>",
+            university: "<text>",
+            hospital: "<text>",
+            park: "<text>",
+            busStation: "<text>",
+          },
+        },
+        projectFloorPlans: [
+          {
+            id: "one",
+            title: "Lower Ground",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/lower-ground.jpg"
+                alt="Lower Ground Plan"
+              />
+            ),
+          },
+          {
+            id: "two",
+            title: "Ground",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/ground.jpg"
+                alt="Ground Plan"
+              />
+            ),
+          },
+          {
+            id: "three",
+            title: "First",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/first.jpg"
+                alt="First Floor Plan"
+              />
+            ),
+          },
+          {
+            id: "four",
+            title: "Terrace",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/terrace.jpg"
+                alt="Terrace"
+              />
+            ),
+          },
+        ],
+        brochureLink:
+          "https://drive.google.com/file/d/1yJj7ywNR5uXz55CLrfnJ8RxqM9U9KiDX/view",
       },
-      images: [
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-        "<img link> or <img location drive link>",
-      ],
-    },
-    featuresSection: {
-      features: [
-        {
-          heading: "<heading>",
-          text: "<text>",
+      {
+        id: "2",
+
+        projectDetails: {
+          propertyName: "Your Spanish Oasis in Goa",
+          heading: " La Maarca",
+          text: "La Maarca is a stunning, independent villa showcasing exquisite Spanish design nestled within Goa's verdant landscape. Elevated on a hillside, this villa offers an exclusive living environment characterized by privacy and natural beauty.",
+          propertySize: "4187 SQFT",
+          priceRange: "<number>",
+          type: "Villa",
+          flatSize: "2847 SQFT",
+          status: "Under Construction",
         },
-        {
-          heading: "<heading>",
-          text: "<text>",
+        projectImages: [
+          "/assets/img/project/la-maarca-images/01-compressed.jpg",
+          "/assets/img/project/la-maarca-images/02-compressed.jpg",
+          "/assets/img/project/la-maarca-images/03-compressed.jpg",
+          "/assets/img/project/la-maarca-images/04-compressed.jpg",
+          "/assets/img/project/la-maarca-images/05-compressed.jpeg",
+          "/assets/img/project/la-maarca-images/06-compressed.jpeg",
+          "/assets/img/project/la-maarca-images/07-compressed.jpg",
+          "/assets/img/project/la-maarca-images/08-compressed.jpg",
+        ],
+
+        projectFeatures: [
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+          {
+            heading: "<heading>",
+            text: "<text>",
+          },
+        ],
+
+        locationDetails: {
+          thumbnailImage:
+            "/assets/img/project/la-maarca-images/mapLocation.jpg",
+          sectionHeading: "Sodiem, Goa",
+          address: "Siolim, Sodiem, Goa.",
+          locationLink: "https://maps.app.goo.gl/eykJmGYeWmjr7qgi9",
+          nearbyAmenities: {
+            supermarket: "<text>",
+            railwayStation: "<text>",
+            airport: "<text>",
+            university: "<text>",
+            hospital: "<text>",
+            park: "<text>",
+            busStation: "<text>",
+          },
         },
-        {
-          heading: "<heading>",
-          text: "<text>",
-        },
-        {
-          heading: "<heading>",
-          text: "<text>",
-        },
-        {
-          heading: "<heading>",
-          text: "<text>",
-        },
-        {
-          heading: "<heading>",
-          text: "<text>",
-        },
-      ],
-    },
-    locationSection: {
-      thumbnailImage: "<img link> or <img location drive link>",
-      sectionHeading: "<text>",
-      address: "<text>",
-      locationLink: "<link from google maps>",
-      nearbyAmenities: {
-        supermarket: "<text>",
-        railwayStation: "<text>",
-        airport: "<text>",
-        university: "<text>",
-        hospital: "<text>",
-        park: "<text>",
-        busStation: "<text>",
+        projectFloorPlans: [
+          {
+            id: "one",
+            title: "Lower Ground",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/lower-ground.jpg"
+                alt="Lower Ground Plan"
+              />
+            ),
+          },
+          {
+            id: "two",
+            title: "Ground",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/ground.jpg"
+                alt="Ground Plan"
+              />
+            ),
+          },
+          {
+            id: "three",
+            title: "First",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/first.jpg"
+                alt="First Floor Plan"
+              />
+            ),
+          },
+          {
+            id: "four",
+            title: "Terrace",
+            image: (
+              <img
+                className="content-center floor-plans"
+                src="/assets/img/project/la-maarca-floor-plans/terrace.jpg"
+                alt="Terrace"
+              />
+            ),
+          },
+        ],
+        brochureLink:
+          "https://drive.google.com/file/d/1yJj7ywNR5uXz55CLrfnJ8RxqM9U9KiDX/view",
       },
-    },
-    projectFloorPlans: {
-      features: [
-        {
-          masterPlan: {
-            image: "<img link> or <img location drive link>",
-          },
-        },
-        {
-          floorPlan1: {
-            image: "<img link> or <img location drive link>",
-          },
-        },
-        {
-          floorPlan2: {
-            image: "<img link> or <img location drive link>",
-          },
-        },
-        {
-          floorPlan3: {
-            image: "<img link> or <img location drive link>",
-          },
-        },
-        {
-          floorPlan4: {
-            image: "<img link> or <img location drive link>",
-          },
-        },
-        {
-          floorPlan5: {
-            image: "<img link> or <img location drive link>",
-          },
-        },
-      ],
-    },
-    brochureDetails: {
-      brochure: "<link>",
-      paymentMethods: "<link>",
-    },
+    ],
   },
   contactPage: {
     addresses: [
       {
-        address: "<heading>",
-        email: "<email>",
-        phoneNumber: "<text>",
+        address: "Sodiem Siolim, Siolim, Goa - 403517",
+        email: "worldofsahilanand@gmail.com",
+        phoneNumber: "+91-8282820811",
       },
-      {
-        address: "<heading>",
-        email: "<email>",
-        phoneNumber: "<text>",
-      },
-      {
-        address: "<heading>",
-        email: "<email>",
-        phoneNumber: "<text>",
-      },
+      // {
+      //   address: "<heading>",
+      //   email: "<email>",
+      //   phoneNumber: "<text>",
+      // },
+      // {
+      //   address: "<heading>",
+      //   email: "<email>",
+      //   phoneNumber: "<text>",
+      // },
     ],
-    formSection: {
-      sectionHeading: "<text>",
-      heading: "<text>",
-    },
   },
 };

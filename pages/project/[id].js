@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout/Layout";
 import projectData from "../../util/project.json";
+import { websiteData } from "../../websiteData";
 
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -71,55 +72,30 @@ const swiperOptions = {
 const ProjectDetails = () => {
   let Router = useRouter();
   const [formIsShowing, setFormIsShowing] = useState(false);
-  const [activeTab, setActiveTab] = useState("master");
-
-  const renderImage = () => {
-    switch (activeTab) {
-      case "master":
-        return (
-          <img
-            className="content-center"
-            src="/assets/img/images/plan_img01.jpg"
-            alt="Master Plan"
-          />
-        );
-      case "tower":
-        return (
-          <img
-            className="content-center"
-            src="/assets/img/images/plan_img02.jpg"
-            alt="Tower Plan"
-          />
-        );
-      case "double":
-        return (
-          <img
-            className="content-center"
-            src="/assets/img/images/plan_img01.jpg"
-            alt="Double Height"
-          />
-        );
-      case "penthouse":
-        return (
-          <img
-            className="content-center"
-            src="/assets/img/images/plan_img02.jpg"
-            alt="Penthouse"
-          />
-        );
-      default:
-        return null;
-    }
-  };
+  const [activeTab, setActiveTab] = useState("one");
 
   const [project, setProject] = useState(null);
 
   const { id } = Router.query;
 
   useEffect(() => {
-    setProject(projectData.find((projectData) => projectData.id == id));
+    console.log(id);
+    setProject(
+      websiteData.projectPage.projects.find(
+        (projectData) => projectData.id == id
+      )
+    );
   }, [id]);
-
+  console.log(project);
+  const projectFloorPlans =
+    websiteData.projectPage.projects[id - 1].projectFloorPlans;
+  const renderImage = () => {
+    const selectedPlan = projectFloorPlans.find(
+      (plan) => plan.id === activeTab
+    );
+    return selectedPlan ? selectedPlan.image : null;
+  };
+  const projectImages = websiteData.projectPage.projects[id - 1].projectImages;
   return (
     <>
       {!formIsShowing && (
@@ -132,20 +108,15 @@ const ProjectDetails = () => {
                     <div className="row align-items-end">
                       <div className="col-lg-6">
                         <div className="project-details-title">
-                          <span>{project.location}</span>
-                          <h2 className="title">{project.title}</h2>
+                          <span>{project.projectDetails.propertyName}</span>
+                          <h2 className="title">
+                            {project.projectDetails.heading}
+                          </h2>
                         </div>
                       </div>
                       <div className="col-lg-6">
                         <div className="right-side">
-                          <p>
-                            Nor again is there anyone who loves or pursues or
-                            desires to obtain pain of itself, because it is
-                            pain, but because occasionally circumstances occur
-                            in which toil and pain can procure him some great
-                            pleasure. To take a trivial example, which of us
-                            ever undertakes
-                          </p>
+                          <p>{project.projectDetails.text}</p>
                         </div>
                       </div>
                     </div>
@@ -156,7 +127,8 @@ const ProjectDetails = () => {
                         <FaRulerCombined className="icon" />
                         <div className="content">
                           <p>
-                            Property size <span>174,000 sqft</span>
+                            Property size{" "}
+                            <span>{project.projectDetails.propertySize}</span>
                           </p>
                         </div>
                       </li>
@@ -164,7 +136,8 @@ const ProjectDetails = () => {
                         <TbMoneybag className="icon" />
                         <div className="content">
                           <p>
-                            Price Range <span>$24K - $77K</span>
+                            Price Range{" "}
+                            <span>{project.projectDetails.priceRange}</span>
                           </p>
                         </div>
                       </li>
@@ -172,7 +145,7 @@ const ProjectDetails = () => {
                         <FaBuilding className="icon" />
                         <div className="content">
                           <p>
-                            Type<span>{project.type}</span>
+                            Type<span>{project.projectDetails.type}</span>
                           </p>
                         </div>
                       </li>
@@ -180,7 +153,8 @@ const ProjectDetails = () => {
                         <FaVectorSquare className="icon" />
                         <div className="content">
                           <p>
-                            Flat Size <span>100 - 150 Sqft</span>
+                            Flat Size{" "}
+                            <span>{project.projectDetails.flatSize}</span>
                           </p>
                         </div>
                       </li>
@@ -188,7 +162,7 @@ const ProjectDetails = () => {
                         <FaTools className="icon" />
                         <div className="content">
                           <p>
-                            Status <span>{project.status}</span>
+                            Status <span>{project.projectDetails.status}</span>
                           </p>
                         </div>
                       </li>
@@ -203,61 +177,21 @@ const ProjectDetails = () => {
                   <div className="row">
                     <div className="col-lg-12">
                       <Swiper {...swiperOptions} className="gallery-active">
-                        <SwiperSlide className="gallery-item">
-                          <img
-                            src="/assets/img/gallery/gallery_img01.jpg"
-                            alt=""
-                          />
-                          <Link
-                            href="assets/img/gallery/gallery_img01.jpg"
-                            className="photo-gallery popup-image"
-                          >
-                            Photo gallery
-                          </Link>
-                        </SwiperSlide>
-                        <SwiperSlide className="gallery-item">
-                          <img
-                            src="/assets/img/gallery/gallery_img02.jpg"
-                            alt=""
-                          />
-                        </SwiperSlide>
-                        <SwiperSlide className="gallery-item">
-                          <div className="apartment-view">
-                            <iframe
-                              src="https://www.google.com/maps/embed?pb=!4v1662100217151!6m8!1m7!1sUtVXSDO2fjmgru0WpZ73jA!2m2!1d40.74810413527912!2d-73.98582572164915!3f108.72567799089525!4f-13.920241031746983!5f0.7820865974627469"
-                              allowFullScreen
-                              loading="lazy"
-                            />
-                          </div>
-                        </SwiperSlide>
-                        <SwiperSlide className="gallery-item">
-                          <img
-                            src="/assets/img/gallery/gallery_img01.jpg"
-                            alt=""
-                          />
-                          <Link
-                            href="assets/img/gallery/gallery_img01.jpg"
-                            className="photo-gallery popup-image"
-                          >
-                            Photo gallery
-                          </Link>
-                        </SwiperSlide>
-                        <SwiperSlide className="gallery-item">
-                          <img
-                            src="/assets/img/gallery/gallery_img02.jpg"
-                            alt=""
-                          />
-                          {/* <ViodePopup /> */}
-                        </SwiperSlide>
-                        <SwiperSlide className="gallery-item">
-                          <div className="apartment-view">
-                            <iframe
-                              src="https://www.google.com/maps/embed?pb=!4v1662100217151!6m8!1m7!1sUtVXSDO2fjmgru0WpZ73jA!2m2!1d40.74810413527912!2d-73.98582572164915!3f108.72567799089525!4f-13.920241031746983!5f0.7820865974627469"
-                              allowFullScreen
-                              loading="lazy"
-                            />
-                          </div>
-                        </SwiperSlide>
+                        {projectImages &&
+                          projectImages?.map((imageSrc, index) => (
+                            <SwiperSlide className="gallery-item" key={index}>
+                              <img
+                                src={imageSrc}
+                                alt={`Gallery image ${index + 1}`}
+                              />
+                              <a
+                                href="#download-brochure"
+                                className="photo-gallery popup-image"
+                              >
+                                View Now
+                              </a>
+                            </SwiperSlide>
+                          ))}
                       </Swiper>
                     </div>
                   </div>
@@ -369,42 +303,79 @@ const ProjectDetails = () => {
                     <div className="col-lg-6">
                       <div className="direction-img text-center">
                         <img
-                          src="/assets/img/images/direction_img.jpg"
-                          alt=""
+                          src={project.locationDetails.thumbnailImage}
+                          alt="Location"
                         />
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="direction-content">
                         <div className="section-title mb-40">
-                          <span className="sub-title">Baltimore, MD</span>
-                          <h2 className="title">8601 Honeygo Boulevard,</h2>
+                          <span className="sub-title">
+                            {project.locationDetails.sectionHeading}
+                          </span>
+                          <h2 className="title">
+                            {project.locationDetails.address}
+                          </h2>
                         </div>
                         <ul className="list-wrap">
                           <li>
-                            Supermarket: <span>200M</span>
+                            Supermarket:{" "}
+                            <span>
+                              {
+                                project.locationDetails.nearbyAmenities
+                                  .superMarket
+                              }
+                            </span>
                           </li>
                           <li>
-                            Railway Station: <span>1,800M</span>
+                            Railway Station:{" "}
+                            <span>
+                              {
+                                project.locationDetails.nearbyAmenities
+                                  .railwayStation
+                              }
+                            </span>
                           </li>
                           <li>
-                            Airport: <span>2,790M</span>
+                            Airport:{" "}
+                            <span>
+                              {project.locationDetails.nearbyAmenities.airport}
+                            </span>
                           </li>
                           <li>
-                            University: <span>250M</span>
+                            University:{" "}
+                            <span>
+                              {
+                                project.locationDetails.nearbyAmenities
+                                  .university
+                              }
+                            </span>
                           </li>
                           <li>
-                            Hospital: <span>500M</span>
+                            Hospital:{" "}
+                            <span>
+                              {project.locationDetails.nearbyAmenities.hospital}
+                            </span>
                           </li>
                           <li>
-                            Bus Station: <span>150M</span>
+                            Bus Station:{" "}
+                            <span>
+                              {
+                                project.locationDetails.nearbyAmenities
+                                  .busStation
+                              }
+                            </span>
                           </li>
                           <li>
-                            Park: <span>1,500M</span>
+                            Park:{" "}
+                            <span>
+                              1,{project.locationDetails.nearbyAmenities.park}
+                            </span>
                           </li>
                         </ul>
                         <Link
-                          href="/project/1"
+                          href={project.locationDetails.locationLink}
                           className="button-58"
                           data-wow-delay=".4s"
                         >
@@ -429,61 +400,61 @@ const ProjectDetails = () => {
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "master" ? "active" : ""
+                                activeTab === "one" ? "active" : ""
                               }`}
-                              id="master-tab"
+                              id="one-tab"
                               type="button"
                               role="tab"
-                              aria-controls="master-tab-pane"
-                              aria-selected={activeTab === "master"}
-                              onClick={() => setActiveTab("master")}
+                              aria-controls="one-tab-pane"
+                              aria-selected={activeTab === "one"}
+                              onClick={() => setActiveTab("one")}
                             >
-                              Master Plan
+                              Lower Ground
                             </button>
                           </li>
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "tower" ? "active" : ""
+                                activeTab === "two" ? "active" : ""
                               }`}
-                              id="tower-tab"
+                              id="two-tab"
                               type="button"
                               role="tab"
-                              aria-controls="tower-tab-pane"
-                              aria-selected={activeTab === "tower"}
-                              onClick={() => setActiveTab("tower")}
+                              aria-controls="two-tab-pane"
+                              aria-selected={activeTab === "two"}
+                              onClick={() => setActiveTab("two")}
                             >
-                              Tower Plan
+                              Ground
                             </button>
                           </li>
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "double" ? "active" : ""
+                                activeTab === "three" ? "active" : ""
                               }`}
-                              id="double-tab"
+                              id="three-tab"
                               type="button"
                               role="tab"
-                              aria-controls="double-tab-pane"
-                              aria-selected={activeTab === "double"}
-                              onClick={() => setActiveTab("double")}
+                              aria-controls="three-tab-pane"
+                              aria-selected={activeTab === "three"}
+                              onClick={() => setActiveTab("three")}
                             >
-                              Double Height
+                              First
                             </button>
                           </li>
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "penthouse" ? "active" : ""
+                                activeTab === "four" ? "active" : ""
                               }`}
-                              id="penthouse-tab"
+                              id="four-tab"
                               type="button"
                               role="tab"
-                              aria-controls="penthouse-tab-pane"
-                              aria-selected={activeTab === "penthouse"}
-                              onClick={() => setActiveTab("penthouse")}
+                              aria-controls="four-tab-pane"
+                              aria-selected={activeTab === "four"}
+                              onClick={() => setActiveTab("four")}
                             >
-                              Penthouse
+                              Terrace
                             </button>
                           </li>
                         </ul>
@@ -491,7 +462,7 @@ const ProjectDetails = () => {
                           {renderImage()}
                         </div>
                       </div>
-                      <div className="file-wrap">
+                      <div id="download-brochure" className="file-wrap">
                         <ul className="list-wrap">
                           <li>
                             <button
@@ -500,7 +471,7 @@ const ProjectDetails = () => {
                               // target="_blank"
                               onClick={() => {
                                 setFormIsShowing(!formIsShowing);
-                                console.log("button clicked");
+                                brochureLink(project.brochureLink);
                               }}
                             >
                               <CiFileOn className="brochure-icon" />
@@ -530,7 +501,10 @@ const ProjectDetails = () => {
         </Layout>
       )}
       {formIsShowing && (
-        <BrochureDownloadForm setFormIsShowing={setFormIsShowing} />
+        <BrochureDownloadForm
+          setFormIsShowing={setFormIsShowing}
+          brochureLink={brochureLink}
+        />
       )}
     </>
   );
