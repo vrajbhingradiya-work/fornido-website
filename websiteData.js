@@ -71,7 +71,7 @@ export const websiteData = {
   },
   homePage: {
     heroSection: {
-      heading: "We'll create the home you've always dreamed of",
+      heading: "Crearemos el hogar que siempre has soñado",
       bgVideoLink: "<link>",
       button: {
         title: "Learn More",
@@ -79,8 +79,8 @@ export const websiteData = {
       },
     },
     aboutSection: {
-      sectionHeading: "WHO WE ARE",
-      heading: "30 years as a trusted leader in the real estate industry",
+      sectionHeading: "Quiénes Somos",
+      heading: "treinta años as a trusted leader in the real estate industry",
       text: "For over three decades, FORNIDO has been a cornerstone in the global real estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions across the globe. Our portfolio spans multiple countries, offering a wide range of options to suit your lifestyle and investment goals. ",
       button: {
         title: "More About",
@@ -88,7 +88,7 @@ export const websiteData = {
       },
     },
     projectsSection: {
-      sectionHeading: "FEATURED PROJECTS",
+      sectionHeading: "Proyectos Destacados",
       heading: "See What’s New: Ongoing and Completed Projects",
       buttonTitle: "LEARN MORE",
       projects: [
@@ -115,7 +115,7 @@ export const websiteData = {
       ],
     },
     servicesSection: {
-      sectionHeading: "How about this?",
+      sectionHeading: "¿Qué tal esto?",
       heading:
         "Affordable Living Solutions, Turning Spaces into Affordable Comfort",
       services: [
@@ -145,25 +145,26 @@ export const websiteData = {
   aboutUsPage: {
     aboutSection: {
       thumbnailImage: "<img link> or <img location drive link>",
-      sectionHeading: "WHO WE ARE",
-      heading: "30 years of leadership in real estate sector",
-      text: "<text>",
+      sectionHeading: "Quiénes Somos",
+      heading: "treinta años as a trusted leader in the real estate industry",
+      text: "For over three decades, FORNIDO has been a cornerstone in the global real      estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions across the globe. Our portfolio spans multiple countries, offering a wide range of options to suit your lifestyle and investment goals.",
     },
     ourVisionSection: {
       thumbnailImage: "<img link> or <img location drive link>",
-      sectionHeading: "<text>",
-      heading: "<text>",
-      text: "<text>",
+      sectionHeading: "Nuestra Visión",
+      heading:
+        "We consider ourselves as the catalysts for realizing people's ambitions.",
+      text: "Our vision is to lead the real estate industry by crafting iconic developments that exceed global standards and offer diverse, enriching experiences for our clients.",
     },
     ourMissionSection: {
       thumbnailImage: "<img link> or <img location drive link>",
-      sectionHeading: "<text>",
-      heading: "<text>",
-      text: "<text>",
+      sectionHeading: "Nuestra Misión",
+      heading: "To become the world's most reliable name in real estate.",
+      text: "Our mission is to lead the industry in creating cutting-edge, environmentally conscious luxury housing that exceeds the highest standards of excellence, providing unparalleled value and satisfaction to every customer.",
     },
     contactDetails: {
-      email: "<text>",
-      phoneNumber: "<text>",
+      email: "worldofsahilanand@gmail.com",
+      phoneNumber: "+91-8282820811",
       socialLinks: {
         facebook: "<link>",
         instagram: "<link>",
