@@ -105,7 +105,7 @@ export default function Menu({ isShow, scroll }) {
                 }`}
                 href="/project/1"
               >
-                Projects One
+                La Maarca
               </Link>
             </li>
             <li>
@@ -119,7 +119,7 @@ export default function Menu({ isShow, scroll }) {
                 }`}
                 href="/project/2"
               >
-                Projects Two
+                La Maarca
               </Link>
             </li>
           </ul>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { websiteData } from "../../websiteData";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -13,6 +14,8 @@ const swiperOptions = {
   loop: true,
 };
 export default function Project3() {
+  const projectsSection = websiteData.homePage.projectsSection;
+
   return (
     <>
       <section className="project-area project-style-three section-pt-140 section-pb-140">
@@ -20,17 +23,19 @@ export default function Project3() {
           <div className="row">
             <div className="col-xl-5">
               <div className="section-title mb-50">
-                <span className="sub-title">Featured projects</span>
-                <h2 className="title">
-                  Discover our Underconstrution and comple projects
-                </h2>
+                <span className="sub-title">
+                  {projectsSection.sectionHeading}
+                </span>
+                <h2 className="title">{projectsSection.heading}</h2>
                 <Link
                   href="/project/1"
                   className="button-58"
                   data-wow-delay=".4s"
                 >
-                  <span class="text button-dark-57">Explore Now</span>
-                  <span>Explore Now</span>
+                  <span class="text button-dark-57">
+                    {projectsSection.buttonTitle}
+                  </span>
+                  <span>{projectsSection.buttonTitle}</span>
                 </Link>
               </div>
             </div>
@@ -42,16 +47,62 @@ export default function Project3() {
                       <div className="project-thumb">
                         <Link href="/project/1">
                           <img
-                            src="assets/img/project/project_img01.jpg"
+                            className="project-section-image"
+                            src={
+                              websiteData.projectPage.projects[0]
+                                .projectImages[0]
+                            }
                             alt=""
                           />
                         </Link>
                       </div>
                       <div className="project-content">
                         <h3 className="title">
-                          <Link href="/project/1">New Central Garden</Link>
+                          <Link href="/project/1">
+                            {
+                              websiteData.projectPage.projects[0].projectDetails
+                                .heading
+                            }
+                          </Link>
                         </h3>
-                        <span>Baltimore, MD</span>
+                        <span>
+                          {
+                            websiteData.projectPage.projects[0].locationDetails
+                              .address
+                          }
+                        </span>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="project-item">
+                      <div className="project-thumb">
+                        <Link href="/project/2">
+                          <img
+                            className="project-section-image"
+                            src={
+                              websiteData.projectPage.projects[1]
+                                .projectImages[0]
+                            }
+                            alt=""
+                          />
+                        </Link>
+                      </div>
+                      <div className="project-content">
+                        <h3 className="title">
+                          <Link href="/project/2">
+                            {
+                              websiteData.projectPage.projects[1].projectDetails
+                                .heading
+                            }
+                          </Link>
+                        </h3>
+                        <span>
+                          {
+                            websiteData.projectPage.projects[1].locationDetails
+                              .address
+                          }
+                        </span>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -60,52 +111,60 @@ export default function Project3() {
                       <div className="project-thumb">
                         <Link href="/project/1">
                           <img
-                            src="assets/img/project/project_img02.jpg"
+                            src={
+                              websiteData.projectPage.projects[0]
+                                .projectImages[0]
+                            }
                             alt=""
                           />
                         </Link>
                       </div>
                       <div className="project-content">
                         <h3 className="title">
-                          <Link href="/project/1">City Shopping Complex</Link>
+                          <Link href="/project/1">
+                            {
+                              websiteData.projectPage.projects[0].projectDetails
+                                .heading
+                            }
+                          </Link>
                         </h3>
-                        <span>Charlottesville, VA</span>
+                        <span>
+                          {
+                            websiteData.projectPage.projects[0].locationDetails
+                              .address
+                          }
+                        </span>
                       </div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="project-item">
                       <div className="project-thumb">
-                        <Link href="/project/1">
+                        <Link href="/project/2">
                           <img
-                            src="assets/img/project/project_img03.jpg"
+                            src={
+                              websiteData.projectPage.projects[1]
+                                .projectImages[0]
+                            }
                             alt=""
                           />
                         </Link>
                       </div>
                       <div className="project-content">
                         <h3 className="title">
-                          <Link href="/project/1">Modern Residential Park</Link>
+                          <Link href="/project/2">
+                            {
+                              websiteData.projectPage.projects[1].projectDetails
+                                .heading
+                            }
+                          </Link>
                         </h3>
-                        <span>New York, NY</span>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="project-item">
-                      <div className="project-thumb">
-                        <Link href="/project/1">
-                          <img
-                            src="assets/img/project/project_img04.jpg"
-                            alt=""
-                          />
-                        </Link>
-                      </div>
-                      <div className="project-content">
-                        <h3 className="title">
-                          <Link href="/project/1">Paragon Hotel Concept</Link>
-                        </h3>
-                        <span>New Orleans, LA</span>
+                        <span>
+                          {
+                            websiteData.projectPage.projects[1].locationDetails
+                              .address
+                          }
+                        </span>
                       </div>
                     </div>
                   </SwiperSlide>

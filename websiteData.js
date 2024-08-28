@@ -90,7 +90,7 @@ export const websiteData = {
     projectsSection: {
       sectionHeading: "Proyectos Destacados",
       heading: "See What’s New: Ongoing and Completed Projects",
-      buttonTitle: "LEARN MORE",
+      buttonTitle: "EXPLORE NOW",
       projects: [
         {
           thumbnail: "assets/img/project/h2_project_img01.jpg",
@@ -120,17 +120,17 @@ export const websiteData = {
         "Affordable Living Solutions, Turning Spaces into Affordable Comfort",
       services: [
         {
-          image: "/assets/img/images/services_01.png",
+          image: "/assets/img/project/la-maarca-images/05-compressed.jpeg",
           heading: "Residential Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
         {
-          image: "/assets/img/images/services_02.png",
+          image: "/assets/img/project/la-maarca-images/06-compressed.jpeg",
           heading: "Commercial Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
         {
-          image: "/assets/img/images/services_03.png",
+          image: "/assets/img/project/la-maarca-images/07-compressed.jpg",
           heading: "Industrial Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
@@ -144,20 +144,20 @@ export const websiteData = {
   },
   aboutUsPage: {
     aboutSection: {
-      thumbnailImage: "<img link> or <img location drive link>",
+      thumbnailImage: "/assets/img/images/about_img.jpg",
       sectionHeading: "Quiénes Somos",
       heading: "treinta años as a trusted leader in the real estate industry",
       text: "For over three decades, FORNIDO has been a cornerstone in the global real      estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions across the globe. Our portfolio spans multiple countries, offering a wide range of options to suit your lifestyle and investment goals.",
     },
     ourVisionSection: {
-      thumbnailImage: "<img link> or <img location drive link>",
+      thumbnailImage: "/assets/img/images/vision_img.jpg",
       sectionHeading: "Nuestra Visión",
       heading:
         "We consider ourselves as the catalysts for realizing people's ambitions.",
       text: "Our vision is to lead the real estate industry by crafting iconic developments that exceed global standards and offer diverse, enriching experiences for our clients.",
     },
     ourMissionSection: {
-      thumbnailImage: "<img link> or <img location drive link>",
+      thumbnailImage: "/assets/img/images/mission_img.jpg",
       sectionHeading: "Nuestra Misión",
       heading: "To become the world's most reliable name in real estate.",
       text: "Our mission is to lead the industry in creating cutting-edge, environmentally conscious luxury housing that exceeds the highest standards of excellence, providing unparalleled value and satisfaction to every customer.",

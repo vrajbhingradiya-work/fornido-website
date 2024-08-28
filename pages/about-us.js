@@ -4,6 +4,7 @@ import { websiteData } from "../websiteData";
 import Link from "next/link";
 
 export default function Overview() {
+  const aboutUsPageData = websiteData.aboutUsPage;
   return (
     <>
       <Layout headerStyle={5}>
@@ -39,31 +40,31 @@ export default function Overview() {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="about-img text-center">
-                  <img src="/assets/img/images/about_img.jpg" alt="" />
+                  <img
+                    src={aboutUsPageData.aboutSection.thumbnailImage}
+                    alt="About Us"
+                  />
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="about-content">
                   <div className="section-title mb-40">
-                    <span className="sub-title">Who we are</span>
+                    <span className="sub-title">
+                      {aboutUsPageData.aboutSection.sectionHeading}
+                    </span>
                     <h2 className="title">
-                      30 years of leadership in real estate sector
+                      {aboutUsPageData.aboutSection.heading}
                     </h2>
                   </div>
-                  <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui
-                    ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                    qui dolorem ipsum quia dolor sit amet sed quia non numquam
-                  </p>
+                  <p>{aboutUsPageData.aboutSection.text}</p>
                   {/* <Link href="overview" className="btn transparent-btn">
-                    <div className="btn_m">
-                      <div className="btn_c">
-                        <div className="btn_t1">learn more</div>
-                        <div className="btn_t2">learn more</div>
-                      </div>
-                    </div>
-                  </Link> */}
+        <div className="btn_m">
+          <div className="btn_c">
+            <div className="btn_t1">learn more</div>
+            <div className="btn_t2">learn more</div>
+          </div>
+        </div>
+      </Link> */}
                 </div>
               </div>
             </div>
@@ -122,29 +123,30 @@ export default function Overview() {
             <div className="row align-items-center">
               <div className="col-lg-6 order-0 order-lg-2">
                 <div className="vision-img text-center">
-                  <img src="/assets/img/images/vision_img.jpg" alt="" />
+                  <img
+                    src={aboutUsPageData.ourVisionSection.thumbnailImage}
+                    alt="Our Vision"
+                  />
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="vision-content">
                   <div className="section-title mb-35">
-                    <span className="sub-title">Our vision</span>
+                    <span className="sub-title">
+                      {aboutUsPageData.ourVisionSection.sectionHeading}
+                    </span>
                     <h2 className="title">
-                      We believe that we are enablers of people's dreams
+                      {aboutUsPageData.ourVisionSection.heading}
                     </h2>
                   </div>
-                  <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui
-                    ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                    qui dolorem ipsum quia dolor sit amet sed quia non numquam
-                  </p>
+                  <p>{aboutUsPageData.ourVisionSection.text}</p>
                   {/* <img src="/assets/img/images/sine.png" alt="" /> */}
                 </div>
               </div>
             </div>
           </div>
         </section>
+
         {/* vision-area-end */}
         {/* mission-area */}
 
@@ -153,31 +155,31 @@ export default function Overview() {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="mission-img">
-                  <img src="/assets/img/images/mission_img.jpg" alt="" />
+                  <img
+                    src={aboutUsPageData.ourMissionSection.thumbnailImage}
+                    alt="Our Mission"
+                  />
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="mission-content">
                   <div className="section-title mb-40">
-                    <span className="sub-title">Our Mission</span>
+                    <span className="sub-title">
+                      {aboutUsPageData.ourMissionSection.sectionHeading}
+                    </span>
                     <h2 className="title">
-                      To be the most trusted name in real estate globally
+                      {aboutUsPageData.ourMissionSection.heading}
                     </h2>
                   </div>
-                  <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui
-                    ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                    qui dolorem ipsum quia dolor sit amet sed quia non numquam
-                  </p>
+                  <p>{aboutUsPageData.ourMissionSection.text}</p>
                   {/* <Link href="mission" className="btn transparent-btn">
-                    <div className="btn_m">
-                      <div className="btn_c">
-                        <div className="btn_t1">learn more</div>
-                        <div className="btn_t2">learn more</div>
-                      </div>
-                    </div>
-                  </Link> */}
+            <div className="btn_m">
+              <div className="btn_c">
+                <div className="btn_t1">learn more</div>
+                <div className="btn_t2">learn more</div>
+              </div>
+            </div>
+          </Link> */}
                 </div>
               </div>
             </div>
@@ -467,13 +469,17 @@ export default function Overview() {
 
         {/*TODO: add founder's section */}
         {/* founders-section */}
+
         <div className="section-pt-140">
           <section className="founders-section">
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-5 col-md-9">
                   <div className="team-details-thumb">
-                    <img src="/assets/img/team/team_details_img.jpg" alt="" />
+                    <img
+                      src={aboutUsPage.contactDetails.thumbnailImage}
+                      alt="Founder"
+                    />
                   </div>
                 </div>
                 <div className="col-lg-7">
@@ -484,53 +490,52 @@ export default function Overview() {
                       <ul className="list-wrap">
                         <li>
                           <Link
-                            href={`mailto:${websiteData.companyProfile.contactInformation.contactEmail}`}
+                            href={`mailto:${aboutUsPage.contactDetails.email}`}
                           >
-                            {
-                              websiteData.companyProfile.contactInformation
-                                .contactEmail
-                            }
+                            {aboutUsPage.contactDetails.email}
                           </Link>
                         </li>
                         <li>
                           <Link
-                            href={`tel:${websiteData.companyProfile.contactInformation.contactNumber.replace(
+                            href={`tel:${aboutUsPage.contactDetails.phoneNumber.replace(
                               "-",
                               ""
                             )}`}
                           >
-                            {
-                              websiteData.companyProfile.contactInformation
-                                .contactNumber
-                            }
+                            {aboutUsPage.contactDetails.phoneNumber}
                           </Link>
                         </li>
                       </ul>
                     </div>
                     {/* <div className="td-social">
-                      <ul className="list-wrap">
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-facebook-f" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-instagram" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-twitter" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-linkedin-in" />
-                          </Link>
-                        </li>
-                      </ul>
-                    </div> */}
+              <ul className="list-wrap">
+                <li>
+                  <Link href={aboutUsPage.contactDetails.socialLinks.facebook}>
+                    <i className="fab fa-facebook-f" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href={aboutUsPage.contactDetails.socialLinks.instagram}>
+                    <i className="fab fa-instagram" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href={aboutUsPage.contactDetails.socialLinks.twitter}>
+                    <i className="fab fa-twitter" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href={aboutUsPage.contactDetails.socialLinks.linkedin}>
+                    <i className="fab fa-linkedin-in" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href={aboutUsPage.contactDetails.socialLinks.youtube}>
+                    <i className="fab fa-youtube" />
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
                     <p>
                       Nemo enim ipsam voluptatem quia voluptas sit aspernatur
                       aut odit aut fugit, sed quia consequuntur magni dolores
@@ -548,14 +553,15 @@ export default function Overview() {
                       pleasure rationally encounter consequences
                     </p>
                     {/* <div className="sine-img mt-40">
-                      <img src="/assets/img/images/sine.png" alt="" />
-                    </div> */}
+              <img src="/assets/img/images/sine.png" alt="" />
+            </div> */}
                   </div>
                 </div>
               </div>
             </div>
           </section>
         </div>
+
         {/* founders-section-end */}
 
         <InquiryForm />

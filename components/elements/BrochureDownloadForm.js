@@ -11,10 +11,23 @@ const BrochureDownloadForm = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (name && number && email) {
       // Redirect to the Google Drive view and close the form
+
+      const response = await fetch("/api/send-brochure-download-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          clientName: name,
+          clientNumber: number,
+          clientEmailId: email,
+        }), // Convert formData to JSON string
+      });
+      alert("Message successfully sent");
       window.open(brochureLink, "_blank");
       setIsSubmitted(true);
       setError("");

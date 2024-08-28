@@ -75,6 +75,7 @@ const ProjectDetails = () => {
   const [activeTab, setActiveTab] = useState("one");
 
   const [project, setProject] = useState(null);
+  const [brochureLink, setBrochureLink] = useState("");
 
   const { id } = Router.query;
 
@@ -87,6 +88,7 @@ const ProjectDetails = () => {
     );
   }, [id]);
   console.log(project);
+
   const projectFloorPlans =
     websiteData.projectPage.projects[id - 1].projectFloorPlans;
   const renderImage = () => {
@@ -96,6 +98,7 @@ const ProjectDetails = () => {
     return selectedPlan ? selectedPlan.image : null;
   };
   const projectImages = websiteData.projectPage.projects[id - 1].projectImages;
+
   return (
     <>
       {!formIsShowing && (
@@ -471,7 +474,7 @@ const ProjectDetails = () => {
                               // target="_blank"
                               onClick={() => {
                                 setFormIsShowing(!formIsShowing);
-                                brochureLink(project.brochureLink);
+                                setBrochureLink(project.brochureLink);
                               }}
                             >
                               <CiFileOn className="brochure-icon" />

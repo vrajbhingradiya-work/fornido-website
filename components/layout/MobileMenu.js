@@ -74,10 +74,10 @@ export default function MobileMenu() {
                         <li><Link href="/project-two">Projects Three Col</Link></li>
                         <li><Link href="/project-three">Projects Four Col</Link></li> */}
             <li>
-              <Link href="/project/1">Project One</Link>
+              <Link href="/project/1">La Maarca</Link>
             </li>
             <li>
-              <Link href="/project/2">Project Two</Link>
+              <Link href="/project/2">La Maarca</Link>
             </li>
           </ul>
           <div
