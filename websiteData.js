@@ -301,8 +301,8 @@ export const websiteData = {
 
         projectDetails: {
           propertyName: "Your Spanish Oasis in Goa",
-          heading: " La Maarca",
-          text: "La Maarca is a stunning, independent villa showcasing exquisite Spanish design nestled within Goa's verdant landscape. Elevated on a hillside, this villa offers an exclusive living environment characterized by privacy and natural beauty.",
+          heading: " La Bóveda",
+          text: "La Bóveda is a stunning, independent villa showcasing exquisite Spanish design nestled within Goa's verdant landscape. Elevated on a hillside, this villa offers an exclusive living environment characterized by privacy and natural beauty.",
           propertySize: "4187 SQFT",
           priceRange: "<number>",
           type: "Villa",
@@ -310,14 +310,14 @@ export const websiteData = {
           status: "Under Construction",
         },
         projectImages: [
-          "https://i.ibb.co/dgcqN6N/01-compressed.jpg",
-          "https://i.ibb.co/S02XFwq/02-compressed.jpg",
-          "https://i.ibb.co/w6LydGM/03-compressed.jpg",
-          "https://i.ibb.co/4JB3HK7/04-compressed.jpg",
-          "https://i.ibb.co/ky5jzSt/05-compressed.jpg",
-          "https://i.ibb.co/YWqgSGj/06-compressed.jpg",
-          "https://i.ibb.co/9bNH56j/07-compressed.jpg",
-          "https://i.ibb.co/tYvkchP/08-compressed.jpg",
+          "https://i.ibb.co/gb0bt63/01.jpg",
+          "https://i.ibb.co/19Q2nL3/02.jpg",
+          "https://i.ibb.co/WDhGtwc/03.jpg",
+          "https://i.ibb.co/ZJV6CtZ/04.jpg",
+          "https://i.ibb.co/SQWSSzG/05.jpg",
+          "https://i.ibb.co/txcT8WX/06.jpg",
+          "https://i.ibb.co/pKr20Qr/07.jpg",
+          "https://i.ibb.co/Yyw3jXM/08.jpg",
         ],
 
         projectFeatures: [
@@ -349,9 +349,9 @@ export const websiteData = {
 
         locationDetails: {
           thumbnailImage: "https://i.ibb.co/bdPMp3Z/map-Location.jpg",
-          sectionHeading: "Sodiem, Goa",
-          address: "Siolim, Sodiem, Goa.",
-          locationLink: "https://maps.app.goo.gl/eykJmGYeWmjr7qgi9",
+          sectionHeading: "Soiolim, Goa",
+          address: "Siolim marna, Siolim-Assagao border",
+          locationLink: "https://maps.app.goo.gl/jscj4KErGRUcXgJs5?g_st=ic",
           nearbyAmenities: {
             supermarket: "<text>",
             railwayStation: "<text>",
