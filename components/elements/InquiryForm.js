@@ -4,28 +4,21 @@ import { websiteData } from "../../websiteData";
 
 const InquiryForm = () => {
   const inquirySection = websiteData.homePage.inquirySection;
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    termsAccepted: false,
-  });
+
+  // Individual state hooks for each form field
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setSuccess("");
 
-    if (!formData.termsAccepted) {
+    if (!termsAccepted) {
       setError("You must accept the terms and conditions.");
       return;
     }
@@ -37,18 +30,17 @@ const InquiryForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
+          name,
+          phone,
         }),
       });
 
       if (response.ok) {
         setSuccess("Your inquiry has been sent successfully!");
-        setFormData({
-          name: "",
-          phone: "",
-          termsAccepted: false,
-        });
+        // Clear form fields
+        setName("");
+        setPhone("");
+        setTermsAccepted(false);
       } else {
         setError("Failed to send inquiry. Please try again later.");
       }
@@ -79,8 +71,8 @@ const InquiryForm = () => {
                             type="text"
                             name="name"
                             placeholder="Your name"
-                            value={formData.name}
-                            onChange={handleChange}
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                             required
                           />
                         </li>
@@ -89,8 +81,8 @@ const InquiryForm = () => {
                             type="text"
                             name="phone"
                             placeholder="Phone number"
-                            value={formData.phone}
-                            onChange={handleChange}
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
                             required
                           />
                         </li>
@@ -104,8 +96,8 @@ const InquiryForm = () => {
                           name="termsAccepted"
                           className="form-check-input"
                           id="checkbox"
-                          checked={formData.termsAccepted}
-                          onChange={handleChange}
+                          checked={termsAccepted}
+                          onChange={(e) => setTermsAccepted(e.target.checked)}
                         />
                         <label htmlFor="checkbox">
                           I accept <span>Terms &amp; Conditions</span> for

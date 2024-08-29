@@ -195,14 +195,14 @@ export const websiteData = {
           status: "Under Construction",
         },
         projectImages: [
-          "/assets/img/project/la-maarca-images/01-compressed.jpg",
-          "/assets/img/project/la-maarca-images/02-compressed.jpg",
-          "/assets/img/project/la-maarca-images/03-compressed.jpg",
-          "/assets/img/project/la-maarca-images/04-compressed.jpg",
-          "/assets/img/project/la-maarca-images/05-compressed.jpeg",
-          "/assets/img/project/la-maarca-images/06-compressed.jpeg",
-          "/assets/img/project/la-maarca-images/07-compressed.jpg",
-          "/assets/img/project/la-maarca-images/08-compressed.jpg",
+          "https://i.ibb.co/dgcqN6N/01-compressed.jpg",
+          "https://i.ibb.co/S02XFwq/02-compressed.jpg",
+          "https://i.ibb.co/w6LydGM/03-compressed.jpg",
+          "https://i.ibb.co/4JB3HK7/04-compressed.jpg",
+          "https://i.ibb.co/ky5jzSt/05-compressed.jpg",
+          "https://i.ibb.co/YWqgSGj/06-compressed.jpg",
+          "https://i.ibb.co/9bNH56j/07-compressed.jpg",
+          "https://i.ibb.co/tYvkchP/08-compressed.jpg",
         ],
 
         projectFeatures: [
@@ -233,8 +233,7 @@ export const websiteData = {
         ],
 
         locationDetails: {
-          thumbnailImage:
-            "/assets/img/project/la-maarca-images/mapLocation.jpg",
+          thumbnailImage: "https://i.ibb.co/bdPMp3Z/map-Location.jpg",
           sectionHeading: "Sodiem, GOA",
           address: "Siolim,Sodiem, Goa",
           locationLink: "https://maps.app.goo.gl/eykJmGYeWmjr7qgi9",
@@ -311,14 +310,14 @@ export const websiteData = {
           status: "Under Construction",
         },
         projectImages: [
-          "/assets/img/project/la-maarca-images/01-compressed.jpg",
-          "/assets/img/project/la-maarca-images/02-compressed.jpg",
-          "/assets/img/project/la-maarca-images/03-compressed.jpg",
-          "/assets/img/project/la-maarca-images/04-compressed.jpg",
-          "/assets/img/project/la-maarca-images/05-compressed.jpeg",
-          "/assets/img/project/la-maarca-images/06-compressed.jpeg",
-          "/assets/img/project/la-maarca-images/07-compressed.jpg",
-          "/assets/img/project/la-maarca-images/08-compressed.jpg",
+          "https://i.ibb.co/dgcqN6N/01-compressed.jpg",
+          "https://i.ibb.co/S02XFwq/02-compressed.jpg",
+          "https://i.ibb.co/w6LydGM/03-compressed.jpg",
+          "https://i.ibb.co/4JB3HK7/04-compressed.jpg",
+          "https://i.ibb.co/ky5jzSt/05-compressed.jpg",
+          "https://i.ibb.co/YWqgSGj/06-compressed.jpg",
+          "https://i.ibb.co/9bNH56j/07-compressed.jpg",
+          "https://i.ibb.co/tYvkchP/08-compressed.jpg",
         ],
 
         projectFeatures: [
@@ -349,8 +348,7 @@ export const websiteData = {
         ],
 
         locationDetails: {
-          thumbnailImage:
-            "/assets/img/project/la-maarca-images/mapLocation.jpg",
+          thumbnailImage: "https://i.ibb.co/bdPMp3Z/map-Location.jpg",
           sectionHeading: "Sodiem, Goa",
           address: "Siolim, Sodiem, Goa.",
           locationLink: "https://maps.app.goo.gl/eykJmGYeWmjr7qgi9",

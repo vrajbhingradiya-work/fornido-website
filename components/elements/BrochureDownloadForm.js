@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const BrochureDownloadForm = ({
   setFormIsShowing,
   brochureLink = "https://drive.google.com/file/d/1yJj7ywNR5uXz55CLrfnJ8RxqM9U9KiDX/view",
+  projectName = "project",
 }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -16,17 +17,19 @@ const BrochureDownloadForm = ({
     if (name && number && email) {
       // Redirect to the Google Drive view and close the form
 
-      const response = await fetch("/api/send-brochure-download-form", {
+      const response = await fetch("/api/send-brochure-download-form-data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          clientName: name,
-          clientNumber: number,
-          clientEmailId: email,
+          name: name,
+          phone: number,
+          email: email,
+          project: projectName,
         }), // Convert formData to JSON string
       });
+      console.log(response);
       alert("Message successfully sent");
       window.open(brochureLink, "_blank");
       setIsSubmitted(true);
@@ -51,8 +54,8 @@ const BrochureDownloadForm = ({
                     <div className="section-title mb-50">
                       <span className="sub-title">Quick Inquiry</span>
                       <h2 className="title">
-                        If you have any questions? We are glad to consult you as
-                        soon as possible
+                        Please fill in the form to view and download the
+                        brochure!
                       </h2>
                     </div>
                     {isSubmitted ? (

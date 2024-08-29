@@ -76,18 +76,18 @@ const ProjectDetails = () => {
 
   const [project, setProject] = useState(null);
   const [brochureLink, setBrochureLink] = useState("");
+  const [selectedProjectName, setSelectedProjectName] = useState("");
 
   const { id } = Router.query;
 
   useEffect(() => {
     console.log(id);
-    setProject(
-      websiteData.projectPage.projects.find(
-        (projectData) => projectData.id == id
-      )
+    const projectSelected = websiteData.projectPage.projects.find(
+      (projectData) => projectData.id == id
     );
+    setProject(projectSelected);
+    setSelectedProjectName(projectSelected.projectDetails.heading);
   }, [id]);
-  console.log(project);
 
   const projectFloorPlans =
     websiteData.projectPage.projects[id - 1].projectFloorPlans;
@@ -98,6 +98,40 @@ const ProjectDetails = () => {
     return selectedPlan ? selectedPlan.image : null;
   };
   const projectImages = websiteData.projectPage.projects[id - 1].projectImages;
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  // Function to handle image load
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
+
+  // Preload images and handle count
+  useEffect(() => {
+    if (!projectImages || projectImages.length === 0) {
+      setImagesLoaded(true); // No images to load, consider as "loaded"
+      return;
+    }
+
+    let loadedCount = 0;
+    projectImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        loadedCount += 1;
+        if (loadedCount === projectImages.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, [projectImages]);
+
+  // Set imagesLoaded to true when all images are loaded
+  useEffect(() => {
+    if (loadedCount === projectImages.length && projectImages.length > 0) {
+      setImagesLoaded(true);
+    }
+  }, [loadedCount, projectImages.length]);
 
   return (
     <>
@@ -179,23 +213,42 @@ const ProjectDetails = () => {
                 <div className="">
                   <div className="row">
                     <div className="col-lg-12">
-                      <Swiper {...swiperOptions} className="gallery-active">
-                        {projectImages &&
-                          projectImages?.map((imageSrc, index) => (
-                            <SwiperSlide className="gallery-item" key={index}>
+                      {!imagesLoaded && (
+                        <div className="gallery-loading-overlay">
+                          {/* Replace with your custom loading animation */}
+                          <p className="loading-text">
+                            Loading images... ({loadedCount}/
+                            {projectImages.length})
+                          </p>
+                        </div>
+                      )}
+                      <div
+                        className={`gallery-wrapper ${
+                          imagesLoaded ? "gallery-visible" : ""
+                        }`}
+                      >
+                        <Swiper {...swiperOptions} className="gallery-swiper">
+                          {projectImages.map((imageSrc, index) => (
+                            <SwiperSlide
+                              className={`gallery-slide gallery-item ${
+                                imagesLoaded ? "slide-fade-in" : ""
+                              }`}
+                              key={index}
+                            >
                               <img
                                 src={imageSrc}
                                 alt={`Gallery image ${index + 1}`}
                               />
-                              <a
+                              {/* <a
                                 href="#download-brochure"
                                 className="photo-gallery popup-image"
                               >
                                 View Now
-                              </a>
+                              </a> */}
                             </SwiperSlide>
                           ))}
-                      </Swiper>
+                        </Swiper>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -403,7 +456,9 @@ const ProjectDetails = () => {
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "one" ? "active" : ""
+                                activeTab === "one "
+                                  ? "active text-enlarge"
+                                  : ""
                               }`}
                               id="one-tab"
                               type="button"
@@ -418,7 +473,9 @@ const ProjectDetails = () => {
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "two" ? "active" : ""
+                                activeTab === "two "
+                                  ? "active text-enlarge"
+                                  : ""
                               }`}
                               id="two-tab"
                               type="button"
@@ -433,7 +490,9 @@ const ProjectDetails = () => {
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "three" ? "active" : ""
+                                activeTab === "three "
+                                  ? "active text-enlarge"
+                                  : ""
                               }`}
                               id="three-tab"
                               type="button"
@@ -448,7 +507,9 @@ const ProjectDetails = () => {
                           <li className="nav-item" role="presentation">
                             <button
                               className={`nav-link ${
-                                activeTab === "four" ? "active" : ""
+                                activeTab === "four"
+                                  ? "active text-enlarge "
+                                  : ""
                               }`}
                               id="four-tab"
                               type="button"
@@ -507,6 +568,7 @@ const ProjectDetails = () => {
         <BrochureDownloadForm
           setFormIsShowing={setFormIsShowing}
           brochureLink={brochureLink}
+          projectName={selectedProjectName}
         />
       )}
     </>
