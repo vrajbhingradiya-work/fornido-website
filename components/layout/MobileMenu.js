@@ -77,7 +77,7 @@ export default function MobileMenu() {
               <Link href="/project/1">La Maarca</Link>
             </li>
             <li>
-              <Link href="/project/2">La Maarca</Link>
+              <Link href="/project/2">La Boveda</Link>
             </li>
           </ul>
           <div

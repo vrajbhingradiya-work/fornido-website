@@ -119,7 +119,7 @@ export default function Menu({ isShow, scroll }) {
                 }`}
                 href="/project/2"
               >
-                La Maarca
+                La Boveda
               </Link>
             </li>
           </ul>
