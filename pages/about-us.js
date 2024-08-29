@@ -477,7 +477,7 @@ export default function Overview() {
                 <div className="col-lg-5 col-md-9">
                   <div className="team-details-thumb">
                     <img
-                      src={aboutUsPage.contactDetails.thumbnailImage}
+                      src={aboutUsPageData.contactDetails.thumbnailImage}
                       alt="Founder"
                     />
                   </div>
@@ -490,19 +490,19 @@ export default function Overview() {
                       <ul className="list-wrap">
                         <li>
                           <Link
-                            href={`mailto:${aboutUsPage.contactDetails.email}`}
+                            href={`mailto:${aboutUsPageData.contactDetails.email}`}
                           >
-                            {aboutUsPage.contactDetails.email}
+                            {aboutUsPageData.contactDetails.email}
                           </Link>
                         </li>
                         <li>
                           <Link
-                            href={`tel:${aboutUsPage.contactDetails.phoneNumber.replace(
+                            href={`tel:${aboutUsPageData.contactDetails?.phoneNumber.replace(
                               "-",
                               ""
                             )}`}
                           >
-                            {aboutUsPage.contactDetails.phoneNumber}
+                            {aboutUsPageData.contactDetails?.phoneNumber}
                           </Link>
                         </li>
                       </ul>
