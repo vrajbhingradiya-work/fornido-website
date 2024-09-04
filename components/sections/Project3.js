@@ -8,7 +8,7 @@ const swiperOptions = {
   slidesPerView: 1,
   spaceBetween: 30,
   autoplay: {
-    delay: 2500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   loop: true,
@@ -106,7 +106,7 @@ export default function Project3() {
                       </div>
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide>
+                  {/* <SwiperSlide>
                     <div className="project-item">
                       <div className="project-thumb">
                         <Link href="/project/1">
@@ -167,7 +167,7 @@ export default function Project3() {
                         </span>
                       </div>
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                 </Swiper>
               </div>
             </div>

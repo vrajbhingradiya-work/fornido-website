@@ -1,7 +1,9 @@
 import InquiryForm from "../components/elements/InquiryForm";
 import Layout from "../components/layout/Layout";
 import Link from "next/link";
+import { websiteData } from "../websiteData";
 export default function Contact() {
+  const data = websiteData.companyProfile.contactInformation;
   return (
     <>
       <Layout headerStyle={5}>
@@ -39,21 +41,24 @@ export default function Contact() {
                 <div className="contact-info-item">
                   <span className="sub-title">Main office</span>
                   <h2 className="title">
-                    1940 El Cajon Blvd, San Diego, CA 92104, United States
+                    {data.addressInfo.mainOffice.address.addressLine1}
+                    {data.addressInfo.mainOffice.address.addressLine2}
                   </h2>
                   <ul className="list-wrap">
                     <li>
                       <Link href="mailto:relandgroup@mail.com">
-                        relandgroup@mail.com
+                        {data.contactEmail}
                       </Link>
                     </li>
                     <li>
-                      <Link href="tel:0123456789">+7 495 127 5451</Link>
+                      <Link href={`tel:${data.contactNumber.replace("-", "")}`}>
+                        {data.contactNumber}
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-10">
+              {/* <div className="col-lg-4 col-md-6 col-sm-10">
                 <div className="contact-info-item">
                   <span className="sub-title">Second office</span>
                   <h2 className="title">
@@ -88,7 +93,7 @@ export default function Contact() {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

@@ -98,12 +98,12 @@ export default function Footer1({}) {
                     <p>
                       Copyright © <span>Fornido</span>{" "}
                       {new Date().getFullYear()}. All Rights Reserved by{" "}
-                      <Link
+                      <a
                         href="https://www.digitalfry.in/"
-                        className="digital-fry-text  "
+                        className="digital-fry-text"
                       >
-                        Digital Fry
-                      </Link>
+                        <span>Digital Fry</span>
+                      </a>
                     </p>
                   </div>
                   <div className="footer-social">

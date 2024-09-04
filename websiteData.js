@@ -81,7 +81,7 @@ export const websiteData = {
     aboutSection: {
       sectionHeading: "Quiénes Somos",
       heading: "treinta años as a trusted leader in the real estate industry",
-      text: "For over three decades, FORNIDO has been a cornerstone in the global real estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions across the globe. Our portfolio spans multiple countries, offering a wide range of options to suit your lifestyle and investment goals. ",
+      text: "Fornido has been a cornerstone in the luxury real estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions. Our portfolio spans multiple projects, offering a wide range of options to suit your lifestyle goals. ",
       button: {
         title: "More About",
         link: "/about-us",
@@ -120,17 +120,17 @@ export const websiteData = {
         "Affordable Living Solutions, Turning Spaces into Affordable Comfort",
       services: [
         {
-          image: "/assets/img/project/la-maarca-images/05-compressed.jpeg",
+          image: "https://i.ibb.co/dgcqN6N/01-compressed.jpg",
           heading: "Residential Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
         {
-          image: "/assets/img/project/la-maarca-images/06-compressed.jpeg",
+          image: "https://i.ibb.co/gb0bt63/01.jpg",
           heading: "Commercial Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
         {
-          image: "/assets/img/project/la-maarca-images/07-compressed.jpg",
+          image: "https://i.ibb.co/gb0bt63/01.jpg",
           heading: "Industrial Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
