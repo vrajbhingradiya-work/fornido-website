@@ -33,7 +33,7 @@ export default function Slider() {
           <SwiperSlide
             className="single-slider slider-bg"
             style={{
-              backgroundImage: `url("/assets/img/banner/banner_img01.jpg")`,
+              backgroundImage: `https://i.ibb.co/fqw435k/01.jpg"`,
             }}
           >
             <div className="container">
@@ -73,7 +73,7 @@ export default function Slider() {
           <SwiperSlide
             className="single-slider slider-bg"
             style={{
-              backgroundImage: `url("assets/img/banner/banner_right_img02.jpg")`,
+              backgroundImage: `https://i.ibb.co/XkCpvM7/05.jpg`,
             }}
           >
             <div className="container">

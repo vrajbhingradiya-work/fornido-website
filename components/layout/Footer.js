@@ -17,7 +17,7 @@ export default function Footer1({}) {
                       <Link className="flex-content-center" href="/">
                         <img
                           src="/assets/img/logo/logo02.png"
-                          className="website-footer-logo"
+                          className="website-footer-logo objectCover"
                           alt=""
                         />
                       </Link>

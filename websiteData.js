@@ -80,7 +80,7 @@ export const websiteData = {
     },
     aboutSection: {
       sectionHeading: "Quiénes Somos",
-      heading: "treinta años as a trusted leader in the real estate industry",
+      heading: "Redefiniendo luxury as a trusted leader in real estate.",
       text: "Fornido has been a cornerstone in the luxury real estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions. Our portfolio spans multiple projects, offering a wide range of options to suit your lifestyle goals. ",
       button: {
         title: "More About",
@@ -89,7 +89,7 @@ export const websiteData = {
     },
     projectsSection: {
       sectionHeading: "Proyectos Destacados",
-      heading: "See What’s New: Ongoing and Completed Projects",
+      heading: "Ongoing and Completed Projects",
       buttonTitle: "EXPLORE NOW",
       projects: [
         {
@@ -120,17 +120,17 @@ export const websiteData = {
         "Affordable Living Solutions, Turning Spaces into Affordable Comfort",
       services: [
         {
-          image: "https://i.ibb.co/dgcqN6N/01-compressed.jpg",
+          image: "https://i.ibb.co/fqw435k/01.jpg",
           heading: "Residential Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
         {
-          image: "https://i.ibb.co/gb0bt63/01.jpg",
+          image: "https://i.ibb.co/PjTV9t5/02.jpg",
           heading: "Commercial Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
         {
-          image: "https://i.ibb.co/gb0bt63/01.jpg",
+          image: "https://i.ibb.co/0sB4fcr/03.jpg",
           heading: "Industrial Development",
           text: "Magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet sed quia",
         },
@@ -146,8 +146,8 @@ export const websiteData = {
     aboutSection: {
       thumbnailImage: "/assets/img/images/about_img.jpg",
       sectionHeading: "Quiénes Somos",
-      heading: "treinta años as a trusted leader in the real estate industry",
-      text: "For over three decades, FORNIDO has been a cornerstone in the global real      estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions across the globe. Our portfolio spans multiple countries, offering a wide range of options to suit your lifestyle and investment goals.",
+      heading: "Redefiniendo luxury as a trusted leader in real estate.",
+      text: "Fornido has been a cornerstone in the luxury real estate industry. Our commitment to quality, innovation, and customer satisfaction has solidified our reputation as a trusted leader. From sprawling villas and serene residential parks to bustling shopping malls, we have crafted diverse real estate solutions. Our portfolio spans multiple projects, offering a wide range of options to suit your lifestyle goals. ",
     },
     ourVisionSection: {
       thumbnailImage: "/assets/img/images/vision_img.jpg",
@@ -195,14 +195,14 @@ export const websiteData = {
           status: "Under Construction",
         },
         projectImages: [
-          "https://i.ibb.co/dgcqN6N/01-compressed.jpg",
-          "https://i.ibb.co/S02XFwq/02-compressed.jpg",
-          "https://i.ibb.co/w6LydGM/03-compressed.jpg",
-          "https://i.ibb.co/4JB3HK7/04-compressed.jpg",
-          "https://i.ibb.co/ky5jzSt/05-compressed.jpg",
-          "https://i.ibb.co/YWqgSGj/06-compressed.jpg",
-          "https://i.ibb.co/9bNH56j/07-compressed.jpg",
-          "https://i.ibb.co/tYvkchP/08-compressed.jpg",
+          "https://i.ibb.co/fqw435k/01.jpg",
+          "https://i.ibb.co/PjTV9t5/02.jpg",
+          "https://i.ibb.co/0sB4fcr/03.jpg",
+          "https://i.ibb.co/Km6Hj7d/04.jpg",
+          "https://i.ibb.co/XkVcy7g/05.jpg",
+          "https://i.ibb.co/n8zjFfC/06.jpg",
+          "https://i.ibb.co/6tBdxBB/07.jpg",
+          "https://i.ibb.co/SBGV6QP/08.jpg",
         ],
 
         projectFeatures: [
@@ -310,14 +310,13 @@ export const websiteData = {
           status: "Under Construction",
         },
         projectImages: [
-          "https://i.ibb.co/gb0bt63/01.jpg",
-          "https://i.ibb.co/19Q2nL3/02.jpg",
-          "https://i.ibb.co/WDhGtwc/03.jpg",
-          "https://i.ibb.co/ZJV6CtZ/04.jpg",
-          "https://i.ibb.co/SQWSSzG/05.jpg",
-          "https://i.ibb.co/txcT8WX/06.jpg",
-          "https://i.ibb.co/pKr20Qr/07.jpg",
-          "https://i.ibb.co/Yyw3jXM/08.jpg",
+          "https://i.ibb.co/j5NGPnj/01.jpg",
+          "https://i.ibb.co/b1pVjv5/02.jpg",
+          "https://i.ibb.co/wgjZLsw/03.jpg",
+          "https://i.ibb.co/S6PnMvZ/04.jpg",
+          "https://i.ibb.co/XkCpvM7/05.jpg",
+          "https://i.ibb.co/JcQQBxN/06.jpg",
+          "https://i.ibb.co/Pz4YJkJ/07.jpg",
         ],
 
         projectFeatures: [

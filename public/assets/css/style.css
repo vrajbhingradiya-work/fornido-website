@@ -6321,6 +6321,9 @@ label {
     .custom-container {
         max-width: 540px;
     }
+    .footerImage{
+        transform: scale(200%) !important; 
+    }
     .section-title .title {
         font-size: 35px;
     }
@@ -7174,3 +7177,10 @@ label {
             transition: transform 0.3s ease-in-out;
           } */
       
+
+          .objectContain{
+            object-fit: contain;
+           
+                 }
+
+
