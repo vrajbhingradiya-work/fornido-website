@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout/Layout";
-import projectData from "../../util/project.json";
 import { websiteData } from "../../websiteData";
 
 import { Autoplay, Navigation, Pagination } from "swiper";
@@ -20,51 +19,47 @@ import BrochureDownloadForm from "../../components/elements/BrochureDownloadForm
 import InquiryForm from "../../components/elements/InquiryForm";
 
 const swiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
-  slidesPerView: 3,
-  // spaceBetween: 30,
+  modules: [Autoplay, Pagination, Navigation], // Include Swiper modules
+  slidesPerView: 3, // Default number of slides per view
+  spaceBetween: 10, // Space between slides, adjust as needed
   autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
+    delay: 2500, // Delay between slides
+    disableOnInteraction: false, // Continue autoplay after interaction
   },
-  loop: true,
+  loop: true, // Enable infinite loop
 
   // Navigation
   navigation: {
-    nextEl: ".h1n",
-    prevEl: ".h1p",
+    nextEl: ".swiper-button-next", // Class for next button
+    prevEl: ".swiper-button-prev", // Class for previous button
   },
 
   // Pagination
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+    el: ".swiper-pagination", // Class for pagination container
+    clickable: true, // Enable clickable pagination
   },
 
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      // spaceBetween: 30,
+      slidesPerView: 1, // Show 1 slide per view on small screens
+      spaceBetween: 10, // Space between slides on small screens
     },
-    575: {
-      slidesPerView: 2,
-      // spaceBetween: 30,
+    576: {
+      slidesPerView: 1, // Show 1 slide per view on extra-small screens
+      spaceBetween: 10, // Space between slides
     },
-    767: {
-      slidesPerView: 2,
-      // spaceBetween: 30,
+    768: {
+      slidesPerView: 2, // Show 2 slides per view on medium screens
+      spaceBetween: 15, // Space between slides
     },
-    991: {
-      slidesPerView: 2,
-      // spaceBetween: 30,
+    992: {
+      slidesPerView: 3, // Show 3 slides per view on large screens
+      spaceBetween: 20, // Space between slides
     },
-    1199: {
-      slidesPerView: 3,
-      // spaceBetween: 30,
-    },
-    1350: {
-      slidesPerView: 3,
-      // spaceBetween: 30,
+    1200: {
+      slidesPerView: 3, // Show 3 slides per view on extra-large screens
+      spaceBetween: 20, // Space between slides
     },
   },
 };
@@ -98,40 +93,40 @@ const ProjectDetails = () => {
     return selectedPlan ? selectedPlan.image : null;
   };
   const projectImages = websiteData.projectPage.projects[id - 1].projectImages;
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
+  // const [imagesLoaded, setImagesLoaded] = useState(false);
+  // const [loadedCount, setLoadedCount] = useState(0);
 
-  // Function to handle image load
-  const handleImageLoad = () => {
-    setLoadedCount((prev) => prev + 1);
-  };
+  // // Function to handle image load
+  // const handleImageLoad = () => {
+  //   setLoadedCount((prev) => prev + 1);
+  // };
 
-  // Preload images and handle count
-  useEffect(() => {
-    if (!projectImages || projectImages.length === 0) {
-      setImagesLoaded(true); // No images to load, consider as "loaded"
-      return;
-    }
+  // // Preload images and handle count
+  // useEffect(() => {
+  //   if (!projectImages || projectImages.length === 0) {
+  //     setImagesLoaded(true); // No images to load, consider as "loaded"
+  //     return;
+  //   }
 
-    let loadedCount = 0;
-    projectImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = img.onerror = () => {
-        loadedCount += 1;
-        if (loadedCount === projectImages.length) {
-          setImagesLoaded(true);
-        }
-      };
-    });
-  }, [projectImages]);
+  //   let loadedCount = 0;
+  //   projectImages.forEach((src) => {
+  //     const img = new Image();
+  //     img.src = src;
+  //     img.onload = img.onerror = () => {
+  //       loadedCount += 1;
+  //       if (loadedCount === projectImages.length) {
+  //         setImagesLoaded(true);
+  //       }
+  //     };
+  //   });
+  // }, [projectImages]);
 
-  // Set imagesLoaded to true when all images are loaded
-  useEffect(() => {
-    if (loadedCount === projectImages.length && projectImages.length > 0) {
-      setImagesLoaded(true);
-    }
-  }, [loadedCount, projectImages.length]);
+  // // Set imagesLoaded to true when all images are loaded
+  // useEffect(() => {
+  //   if (loadedCount === projectImages.length && projectImages.length > 0) {
+  //     setImagesLoaded(true);
+  //   }
+  // }, [loadedCount, projectImages.length]);
 
   return (
     <>
@@ -213,25 +208,23 @@ const ProjectDetails = () => {
                 <div className="">
                   <div className="row">
                     <div className="col-lg-12">
-                      {!imagesLoaded && (
+                      {/* {!imagesLoaded && (
                         <div className="gallery-loading-overlay">
-                          {/* Replace with your custom loading animation */}
                           <p className="loading-text">
                             Loading images... ({loadedCount}/
                             {projectImages.length})
                           </p>
                         </div>
-                      )}
+                      )} */}
                       <div
-                        className={`gallery-wrapper ${
-                          imagesLoaded ? "gallery-visible" : ""
-                        }`}
+                        className={`gallery-wrapper
+                          gallery-visible
+                        `}
                       >
                         <Swiper {...swiperOptions} className="gallery-swiper">
                           {projectImages.map((imageSrc, index) => (
                             <SwiperSlide
-                              className={`gallery-slide gallery-item ${
-                                imagesLoaded ? "slide-fade-in" : ""
+                              className={`gallery-slide gallery-item  slide-fade-in 
                               }`}
                               key={index}
                             >
