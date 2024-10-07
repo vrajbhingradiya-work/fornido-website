@@ -160,7 +160,7 @@ const ProjectDetails = () => {
                         <div className="content">
                           <p>
                             Property size{" "}
-                            <span>{project.projectDetails.propertySize}</span>
+                            <span>{project.projectDetails.plotArea}</span>
                           </p>
                         </div>
                       </li>
@@ -185,8 +185,8 @@ const ProjectDetails = () => {
                         <FaVectorSquare className="icon" />
                         <div className="content">
                           <p>
-                            Flat Size{" "}
-                            <span>{project.projectDetails.flatSize}</span>
+                            Carpet Area{" "}
+                            <span>{project.projectDetails.carpetSize}</span>
                           </p>
                         </div>
                       </li>
@@ -368,60 +368,16 @@ const ProjectDetails = () => {
                           </h2>
                         </div>
                         <ul className="list-wrap">
-                          <li>
-                            Supermarket:{" "}
-                            <span>
-                              {
-                                project.locationDetails.nearbyAmenities
-                                  .superMarket
-                              }
-                            </span>
-                          </li>
-                          <li>
-                            Railway Station:{" "}
-                            <span>
-                              {
-                                project.locationDetails.nearbyAmenities
-                                  .railwayStation
-                              }
-                            </span>
-                          </li>
-                          <li>
-                            Airport:{" "}
-                            <span>
-                              {project.locationDetails.nearbyAmenities.airport}
-                            </span>
-                          </li>
-                          <li>
-                            University:{" "}
-                            <span>
-                              {
-                                project.locationDetails.nearbyAmenities
-                                  .university
-                              }
-                            </span>
-                          </li>
-                          <li>
-                            Hospital:{" "}
-                            <span>
-                              {project.locationDetails.nearbyAmenities.hospital}
-                            </span>
-                          </li>
-                          <li>
-                            Bus Station:{" "}
-                            <span>
-                              {
-                                project.locationDetails.nearbyAmenities
-                                  .busStation
-                              }
-                            </span>
-                          </li>
-                          <li>
-                            Park:{" "}
-                            <span>
-                              1,{project.locationDetails.nearbyAmenities.park}
-                            </span>
-                          </li>
+                          {project.locationDetails.nearbyAmenities.map(
+                            (item) => {
+                              return (
+                                <li key={item.title}>
+                                  {" "}
+                                  {item.title} <span>{item.value}</span>
+                                </li>
+                              );
+                            }
+                          )}
                         </ul>
                         <Link
                           href={project.locationDetails.locationLink}

@@ -50,7 +50,7 @@ export const websiteData = {
       {
         title: "instagram",
         icon: <i className="fab fa-instagram icon-fill " />,
-        link: "/insta",
+        link: "https://www.instagram.com/fornido_/",
       },
       {
         title: "facebook",
@@ -188,10 +188,10 @@ export const websiteData = {
           propertyName: "Your Spanish Oasis in Goa",
           heading: " La Maarca",
           text: "La Maarca is a stunning, independent villa showcasing exquisite Spanish design nestled within Goa's verdant landscape. Elevated on a hillside, this villa offers an exclusive living environment characterized by privacy and natural beauty.",
-          propertySize: "4187 SQFT",
+          plotArea: "4187 SQFT",
           priceRange: "<number>",
           type: "Villa",
-          flatSize: "2847 SQFT",
+          carpetSize: "2847 SQFT",
           status: "Under Construction",
         },
         projectImages: [
@@ -237,15 +237,11 @@ export const websiteData = {
           sectionHeading: "Sodiem, GOA",
           address: "Siolim,Sodiem, Goa",
           locationLink: "https://maps.app.goo.gl/eykJmGYeWmjr7qgi9",
-          nearbyAmenities: {
-            superMarket: "<text>",
-            railwayStation: "<text>",
-            airport: "<text>",
-            university: "<text>",
-            hospital: "<text>",
-            park: "<text>",
-            busStation: "<text>",
-          },
+          nearbyAmenities: [
+            { title: "Mopa Airport", value: "30 mins" },
+            { title: "Thalassa Siolim", value: "10 mins" },
+            { title: "Assagao", value: "12 mins" },
+          ],
         },
         projectFloorPlans: [
           {
@@ -303,10 +299,10 @@ export const websiteData = {
           propertyName: "Your Spanish Oasis in Goa",
           heading: " La Bóveda",
           text: "La Bóveda is a stunning, independent villa showcasing exquisite Spanish design nestled within Goa's verdant landscape. Elevated on a hillside, this villa offers an exclusive living environment characterized by privacy and natural beauty.",
-          propertySize: "4187 SQFT",
+          plotArea: "6307 SQFT",
           priceRange: "<number>",
           type: "Villa",
-          flatSize: "2847 SQFT",
+          carpetSize: "3774 SQFT",
           status: "Under Construction",
         },
         projectImages: [
@@ -351,15 +347,15 @@ export const websiteData = {
           sectionHeading: "Soiolim, Goa",
           address: "Siolim marna, Siolim-Assagao border",
           locationLink: "https://maps.app.goo.gl/jscj4KErGRUcXgJs5?g_st=ic",
-          nearbyAmenities: {
-            supermarket: "<text>",
-            railwayStation: "<text>",
-            airport: "<text>",
-            university: "<text>",
-            hospital: "<text>",
-            park: "<text>",
-            busStation: "<text>",
-          },
+          nearbyAmenities: [
+            { title: "Assagao", value: "5 mins" },
+            { title: "Mopa Airport", value: "35 mins" },
+            { title: "Dabolim Airport", value: "65 mins" },
+            { title: "Thalassa", value: "7 mins" },
+            { title: "Vagator beach", value: "15 mins" },
+            { title: "Vinayak Restaurant", value: "10 mins" },
+            { title: "Gunpowder", value: "12 mins" },
+          ],
         },
         projectFloorPlans: [
           {
